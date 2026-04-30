@@ -1,2 +1,2 @@
 # ngo-website
-“All Gods Children Foundation official website – an NGO supporting underprivileged children in Uganda through education, school support, and mentorship programs.”
+“Official website for All Gods Children Foundation, a Uganda-based NGO supporting underprivileged children through education, school programs, and community outreach.”
