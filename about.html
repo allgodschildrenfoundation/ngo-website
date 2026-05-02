@@ -1,121 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - All Gods Children Foundation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-gray-100 text-gray-800">
-
-<!-- NAVIGATION -->
-<nav class="bg-blue-700 text-white px-6 py-4 shadow-md">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
-
-    <!-- LOGO -->
-    <div class="flex items-center gap-2">
-      <img src="images/logo.png" class="h-10" alt="Logo">
-      <span class="text-xl font-bold">All Gods Children</span>
-    </div>
-
-    <!-- MOBILE BUTTON -->
-    <button id="menuBtn" class="md:hidden text-3xl">☰</button>
-
-    <!-- LINKS -->
-    <div id="menu" class="hidden md:flex gap-6 font-semibold absolute md:static top-16 left-0 w-full md:w-auto bg-blue-700 md:bg-transparent p-6 md:p-0 flex-col md:flex-row">
-
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="about.html" class="text-yellow-300">About</a>
-      <a href="programs.html" class="hover:text-yellow-300">Programs</a>
-      <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-
-      <!-- 💙 ADD DONATE BUTTON HERE -->
-      <a href="donate.html" class="bg-white text-blue-700 px-4 py-2 rounded-xl font-bold hover:bg-yellow-300">
-        Donate
-      </a>
-
-    </div>
-
-  </div>
-</nav>
-
-<!-- SCRIPT -->
-<script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
-
-<!-- HEADER -->
-<header class="bg-white text-center py-10 shadow">
-  <h1 class="text-4xl font-bold text-blue-700">About Us</h1>
-  <p class="mt-2 text-gray-600">Learn more about our mission and work in Uganda</p>
-</header>
-
 <!-- CONTENT -->
 <section class="max-w-5xl mx-auto bg-white p-6 md:p-8 mt-6 rounded-xl shadow">
 
   <h2 class="text-2xl font-bold mb-4">Who We Are</h2>
 
-  <p class="mb-4">
-    All Gods Children Foundation is a community-driven initiative based in Uganda, dedicated to
-    improving the lives of underprivileged children through access to quality education.
-    Founded with a deep passion for helping vulnerable children, the foundation was created in
-    response to the challenges many children face—such as lack of school fees, limited learning
-    materials, and minimal academic support. We believe that every child deserves a fair chance to
-    learn, grow, and succeed, regardless of their background.
+  <p class="mb-6">
+    All Gods Children Foundation is a community-driven organization based in Uganda, committed to improving the lives of vulnerable and underprivileged children through access to quality education.
+
+    We were founded out of a deep concern for children who grow up without the basic opportunities needed to succeed in life. In many communities, children face daily struggles such as lack of school fees, limited learning materials, and no academic support at home or in school.
+
+    We believe that education is not a privilege for a few, but a right for every child. Every child deserves a safe learning environment, supportive guidance, and a real chance to build a better future regardless of their background or financial situation.
   </p>
 
-  <p class="mb-4">
-    Our work focuses on removing barriers to education by providing essential school supplies,
-    academic support, and mentorship. Beyond the classroom, we are committed to nurturing
-    well-rounded individuals by promoting personal development, confidence, and life skills.
-    We actively engage with families and communities to raise awareness about the importance of
-    education and to build a supportive environment where children can thrive. Through
-    partnerships, volunteers, and donors, we aim to create sustainable programs that bring lasting
-    change.
+  <!-- ⭐ 1. WHAT WE DO -->
+  <h2 class="text-2xl font-bold mb-4 text-blue-700">What We Do</h2>
+
+  <p class="mb-6">
+    We identify children in vulnerable situations and support them with access to education and basic learning needs. This includes school fees support, uniforms, books, and learning materials.
+
+    We also run after-school tutoring, mentorship, and life skills programs to help children stay in school and perform better academically.
+
+    Beyond education, we engage families and communities to raise awareness about the importance of keeping children in school and creating long-term change.
   </p>
+
+  <!-- ⭐ 2. WHERE YOUR DONATION GOES -->
+  <h2 class="text-2xl font-bold mb-4 text-blue-700">Where Your Donation Goes</h2>
+
+  <p class="mb-6">
+    Every donation directly supports children in need.
+
+    Your support helps us pay school fees for children who cannot afford education, provide uniforms and shoes, supply books and learning materials, and support tutoring programs.
+
+    A portion of donations also goes toward identifying new children in need and maintaining ongoing community outreach programs.
+
+    We ensure that every contribution makes a real, measurable difference in a child’s life.
+  </p>
+
+  <!-- ⭐ 3. JOIN US -->
+  <h2 class="text-2xl font-bold mb-4 text-blue-700">Join Us</h2>
 
   <p>
-    This foundation was inspired by the everyday realities faced by many children in our
-    communities—children who are eager to learn but lack the support and resources to stay in
-    school. Seeing this firsthand motivated us to take action and become part of the solution.
-    At All Gods Children Foundation, we are driven by one simple belief:
+    You can be part of this mission.
+
+    Whether through donating, volunteering, or partnering with us, your involvement helps change a child’s future.
+
+    Together, we can make sure no child is left behind.
+
     <b>“Every Child, Every Chance.”</b>
   </p>
 
 </section>
-
-<!-- IMAGE -->
-<section class="max-w-5xl mx-auto mt-6 px-4">
-  <img src="images/image2.jpg" class="rounded-xl shadow w-full" alt="About image">
-</section>
-
-<!-- 💙 DONATION SECTION (ADDED LIKE GALLERY STYLE) -->
-<section class="bg-blue-700 text-white text-center py-10 mt-10 px-4">
-
-  <h2 class="text-2xl font-bold">Support Our Mission</h2>
-
-  <p class="mt-3 max-w-xl mx-auto">
-    Your donation helps children like Josh get education, hope, and a future.
-  </p>
-
-  <a href="donate.html"
-     class="inline-block mt-5 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-yellow-300">
-    Donate Now
-  </a>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="text-center p-4 mt-6 text-gray-600">
-  © 2026 All Gods Children Foundation
-</footer>
-
-</body>
-</html>
