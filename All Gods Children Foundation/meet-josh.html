@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet Josh - All Gods Children Foundation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Josh | All God’s Children Foundation</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -15,7 +15,12 @@
 
     <div class="flex items-center gap-2">
       <img src="images/logo.png" class="h-10" alt="Logo">
-      <span class="text-xl font-bold">All Gods Children</span>
+
+      <div class="flex flex-col leading-tight">
+        <span class="text-xl font-bold">All God’s Children Foundation</span>
+        <span class="text-xs text-white/70">Uganda NGO</span>
+      </div>
+
     </div>
 
     <button id="menuBtn" class="md:hidden text-3xl">☰</button>
@@ -26,6 +31,7 @@
       <a href="about.html" class="hover:text-yellow-300">About</a>
       <a href="programs.html" class="hover:text-yellow-300">Programs</a>
       <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
+      <a href="coffee.html" class="hover:text-yellow-300">Coffee for Education</a>
       <a href="contact.html" class="hover:text-yellow-300">Contact</a>
       <a href="donate.html" class="hover:text-yellow-300">Donate</a>
 
@@ -35,109 +41,82 @@
 </nav>
 
 <script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("menu");
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
 
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
 </script>
 
 <!-- HEADER -->
-<header class="bg-white text-center py-12 shadow px-4">
+<header class="bg-white text-center py-14 shadow px-4">
+
   <h1 class="text-4xl font-bold text-blue-700">Meet Josh</h1>
+
   <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-    A real story of resilience, hope, and the need for opportunity.
+    A real story of a child whose life represents many vulnerable children we support in Uganda.
   </p>
+
 </header>
 
 <!-- STORY -->
 <section class="max-w-5xl mx-auto bg-white p-6 md:p-10 mt-6 rounded-xl shadow">
 
-  <!-- IMAGE 1 (FIXED) -->
-  <img src="josh-1.jpg" class="rounded-xl w-full mb-4">
+  <!-- IMAGE 1 -->
+  <img src="images/josh-1.jpg" class="rounded-xl w-full mb-4">
+
   <p class="text-sm text-gray-500 mb-6">
-    Josh collecting plastic bottles to support his family.
+    Josh collecting plastic bottles to survive instead of attending school.
   </p>
 
-  <p class="text-gray-700 leading-relaxed">
-    Josh is a 10-year-old boy from Hoima, Uganda. He is the firstborn in a family of four children raised by hardworking parents who struggle to meet daily needs.
-  </p>
-
-  <br>
-
-  <p class="text-gray-700 leading-relaxed">
-    One Wednesday morning, while other children were in school, I found Josh at a dumping site collecting plastic bottles. I asked him why he wasn’t in class.
+  <p class="leading-relaxed text-gray-700">
+    Josh is a 10-year-old boy from Hoima, Uganda.
   </p>
 
   <br>
 
-  <p class="text-gray-700 leading-relaxed">
-    His answer was simple, but powerful — he has never been to school.
+  <p class="leading-relaxed text-gray-700">
+    He has never been to school and works collecting bottles to survive.
   </p>
 
   <br>
 
-  <p class="text-gray-700 leading-relaxed">
-    Despite that, Josh told me one word he knows in English:
-    <b>“Doctor.”</b>
-    That is his dream.
+  <p class="leading-relaxed text-gray-700">
+    His dream is to become a doctor.
   </p>
 
-  <!-- IMAGE 2 (FIXED) -->
-  <img src="josh-2.jpg" class="rounded-xl w-full mt-8 mb-4">
+  <!-- IMAGE 2 -->
+  <img src="images/josh-2.jpg" class="rounded-xl w-full mt-8 mb-4">
+
   <p class="text-sm text-gray-500 mb-6">
-    Talking with Josh about his life, dreams, and challenges.
+    Speaking with Josh about his dreams and challenges.
   </p>
 
-  <p class="text-gray-700 leading-relaxed">
-    I spent time talking with him and learning more about his life. Josh works every day collecting plastic bottles to help support himself and his family.
+  <p class="leading-relaxed text-gray-700">
+    He earns about UGX 150 per kilogram of plastic bottles.
   </p>
 
-  <br>
+  <!-- IMAGE 3 -->
+  <img src="images/josh-3.jpg" class="rounded-xl w-full mt-8 mb-4">
 
-  <p class="text-gray-700 leading-relaxed">
-    When I asked him how much he earns, he told me he makes about <b>UGX 150 per kilogram</b>.
-  </p>
-
-  <br>
-
-  <p class="text-gray-700 leading-relaxed">
-    That small amount is what stands between him and the opportunity to go to school.
-  </p>
-
-  <!-- IMAGE 3 (FIXED) -->
-  <img src="josh-3.jpg" class="rounded-xl w-full mt-8 mb-4">
   <p class="text-sm text-gray-500 mb-6">
-    Where Josh sells the plastic bottles he collects.
+    Where Josh sells collected bottles.
   </p>
 
-  <p class="text-gray-700 leading-relaxed">
-    Josh later showed me where he sells the bottles. After that, we shared a simple lunch together and continued talking.
-  </p>
-
-  <br>
-
-  <p class="text-gray-700 leading-relaxed">
-    Before leaving, I gave him a small amount of money and promised to visit him again.
-  </p>
-
-  <br>
-
-  <p class="text-gray-700 font-semibold">
-    But the truth is — Josh doesn’t need temporary help.
-    He needs a real opportunity to go to school and build his future.
+  <p class="leading-relaxed text-gray-700">
+    Josh needs education, not survival work.
   </p>
 
 </section>
 
 <!-- CTA -->
-<section class="bg-blue-700 text-white text-center py-12 mt-8 px-4">
+<section class="bg-blue-700 text-white text-center py-14 mt-10 px-4">
 
   <h2 class="text-3xl font-bold">Help Children Like Josh</h2>
 
   <p class="mt-3 max-w-xl mx-auto">
-    Your support can help children like Josh access education, basic needs, and a chance to achieve their dreams.
+    Your support can change a child’s life.
   </p>
 
   <a href="donate.html"
@@ -149,7 +128,7 @@
 
 <!-- FOOTER -->
 <footer class="text-center p-4 text-gray-600">
-  © 2026 All Gods Children Foundation
+  © 2026 All God’s Children Foundation
 </footer>
 
 </body>
