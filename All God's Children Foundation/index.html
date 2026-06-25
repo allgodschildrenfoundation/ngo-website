@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All God’s Children Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVIGATION (MASTER FIXED) -->
+<nav class="bg-blue-700 text-white px-6 py-4 shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-3">
+      <img src="images/logo.png" class="h-10" alt="Logo">
+
+      <span class="text-xl font-bold whitespace-nowrap">
+        All God&#39;s Children Foundation
+      </span>
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex gap-5 font-semibold flex-wrap items-center">
+
+      <a href="index.html" class="text-yellow-300 whitespace-nowrap">Home</a>
+      <a href="about.html" class="hover:text-yellow-300 whitespace-nowrap">About</a>
+      <a href="programs.html" class="hover:text-yellow-300 whitespace-nowrap">Programs</a>
+
+      <a href="coffee.html" class="hover:text-yellow-300 whitespace-nowrap">
+        Coffee for Education
+      </a>
+
+      <a href="gallery.html" class="hover:text-yellow-300 whitespace-nowrap">Gallery</a>
+      <a href="contact.html" class="hover:text-yellow-300 whitespace-nowrap">Contact</a>
+
+      <a href="donate.html"
+         class="bg-white text-blue-700 px-4 py-2 rounded-xl font-bold hover:bg-yellow-300 whitespace-nowrap">
+        Donate
+      </a>
+
+    </div>
+
+    <!-- MOBILE BUTTON -->
+    <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="menu" class="hidden md:hidden flex flex-col gap-4 px-6 pb-4">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="coffee.html">Coffee for Education</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html">Donate</a>
+
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+<!-- HERO SECTION -->
+<header class="bg-white text-center py-24 px-6">
+
+  <h1 class="text-5xl font-bold text-blue-700 leading-tight">
+    Every Child Deserves Education, Opportunity & Hope
+  </h1>
+
+  <p class="mt-6 text-lg max-w-3xl mx-auto text-gray-600 leading-8">
+    All God’s Children Foundation is a Uganda-based NGO supporting vulnerable children
+    through education, school support, mentorship, and sustainable community initiatives
+    that help break the cycle of poverty.
+  </p>
+
+  <a href="#donate"
+     class="inline-block mt-8 bg-blue-700 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-800">
+    Support a Child Today
+  </a>
+
+</header>
+
+<!-- IMPACT -->
+<section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6 mt-10">
+
+  <div class="bg-white rounded-2xl shadow p-6 text-center">
+    <h2 class="text-3xl font-bold text-blue-700">10+</h2>
+    <p class="mt-2 text-gray-600">Children Supported</p>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow p-6 text-center">
+    <h2 class="text-3xl font-bold text-blue-700">4</h2>
+    <p class="mt-2 text-gray-600">Active Programs</p>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow p-6 text-center">
+    <h2 class="text-3xl font-bold text-blue-700">1</h2>
+    <p class="mt-2 text-gray-600">Community Vision</p>
+  </div>
+
+</section>
+
+<!-- WHY WE EXIST -->
+<section class="max-w-5xl mx-auto bg-white p-8 mt-10 rounded-2xl shadow">
+
+  <h2 class="text-3xl font-bold text-blue-700">Why We Exist</h2>
+
+  <p class="mt-6 leading-8 text-gray-700">
+    Many children in our communities are bright and full of potential but are unable to attend school
+    due to financial hardship.
+    <br><br>
+    We exist to ensure that lack of school fees, uniforms, or materials does not determine a child’s future.
+    Our mission is to restore opportunity through education support and long-term empowerment.
+  </p>
+
+</section>
+
+<!-- JOSH STORY -->
+<section class="max-w-5xl mx-auto bg-white p-8 mt-8 rounded-2xl shadow text-center">
+
+  <h2 class="text-3xl font-bold text-blue-700">Real Stories, Real Impact</h2>
+
+  <p class="mt-4 text-gray-600">
+    Meet Josh — a child whose story reflects many others we support across Uganda.
+  </p>
+
+  <a href="meet-josh.html"
+     class="inline-block mt-6 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold">
+    Read His Story
+  </a>
+
+</section>
+
+<!-- PROGRAMS -->
+<section class="max-w-5xl mx-auto bg-white p-8 mt-8 rounded-2xl shadow">
+
+  <h2 class="text-3xl font-bold text-blue-700">Our Programs</h2>
+
+  <ul class="mt-6 space-y-2 text-gray-700 list-disc pl-6">
+    <li>Back-to-School Support</li>
+    <li>School Supplies Distribution</li>
+    <li>After-School Tutoring</li>
+    <li>Life Skills & Mentorship</li>
+  </ul>
+
+</section>
+
+<!-- COFFEE INITIATIVE -->
+<section class="max-w-5xl mx-auto bg-white p-8 mt-8 rounded-2xl shadow">
+
+  <h2 class="text-3xl font-bold text-blue-700">
+    Coffee for Education Initiative
+  </h2>
+
+  <p class="mt-6 leading-8 text-gray-700">
+    Alongside education programs, we are building sustainable initiatives such as coffee farming.
+    A portion of income from this initiative is directed toward supporting children’s education
+    and strengthening long-term community development.
+  </p>
+
+  <a href="coffee.html"
+     class="inline-block mt-6 text-blue-700 font-bold">
+    Learn more →
+  </a>
+
+</section>
+
+<!-- DONATION -->
+<section id="donate" class="bg-blue-700 text-white text-center py-16 mt-12 px-6">
+
+  <h2 class="text-4xl font-bold">Support a Child Today</h2>
+
+  <p class="mt-4 max-w-2xl mx-auto">
+    Your support helps children stay in school, receive learning materials,
+    and build a better future.
+  </p>
+
+  <div class="mt-6">
+    <p><b>Mobile Money:</b> +256 701 973542</p>
+    <p><b>Email:</b> allgodschildrenfoundation@gmail.com</p>
+  </div>
+
+  <a href="https://wa.me/256701973542"
+     class="inline-block mt-6 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold">
+    Donate / Contact Us
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center p-6 text-gray-600">
+  © 2026 All God’s Children Foundation | Uganda
+</footer>
+
+</body>
+</html>
