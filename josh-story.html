@@ -1,0 +1,546 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12366b">
+  <meta name="description" content="Meet Josh, a 10-year-old boy who dreams of becoming a doctor. His story reflects why All God's Children Foundation works to help children access education.">
+  <title>Josh's Story | Impact Stories | All God's Children Foundation</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .josh-hero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 440px;
+      padding: 75px 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #12366b;
+      background-image:
+        linear-gradient(rgba(8, 29, 62, .74), rgba(8, 29, 62, .78)),
+        url("images/josh-1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .josh-hero-content {
+      width: min(850px, 100%);
+      margin: 0 auto;
+    }
+
+    .josh-hero .eyebrow {
+      color: #ffe08a;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .josh-hero h1 {
+      margin: 14px 0;
+      color: #fff;
+      font-size: clamp(2.1rem, 5vw, 3.5rem);
+      line-height: 1.15;
+    }
+
+    .josh-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .story-meta {
+      margin: 0 0 25px;
+      color: #555;
+      font-size: .95rem;
+    }
+
+    .josh-story {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .josh-story h2 {
+      margin-top: 34px;
+      color: #12366b;
+    }
+
+    .josh-story p {
+      line-height: 1.9;
+    }
+
+    .josh-quote {
+      margin: 28px 0;
+      padding: 24px 28px;
+      border-left: 5px solid #237a4b;
+      background: #f3f6fa;
+      border-radius: 4px;
+    }
+
+    .josh-quote p {
+      margin: 0;
+      color: #12366b;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .josh-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+      align-items: start;
+    }
+
+    .josh-gallery figure {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      background: #f3f6fa;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+    }
+
+    .josh-gallery figure:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .josh-gallery img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Show the complete third photo without cropping Josh */
+    .josh-gallery img.josh-full-photo {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      object-position: center;
+      background: #f3f6fa;
+    }
+
+    .josh-gallery figcaption {
+      padding: 14px 16px;
+      line-height: 1.7;
+    }
+
+    .josh-gallery figcaption strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #12366b;
+    }
+
+    .story-note {
+      margin-top: 25px;
+      color: #555;
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+
+    .josh-cta {
+      padding: 45px 20px;
+      text-align: center;
+      background: #f3f6fa;
+    }
+
+    .josh-cta h2 {
+      color: #12366b;
+    }
+
+    .josh-cta p {
+      max-width: 700px;
+      margin: 0 auto 22px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 650px) {
+      .josh-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .josh-gallery figure:last-child {
+        grid-column: auto;
+      }
+
+      .josh-gallery img {
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+      }
+
+      .josh-gallery img.josh-full-photo {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+  <div class="nav-wrap">
+
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
+
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
+
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+
+    <section class="josh-hero">
+      <div class="josh-hero-content">
+        <span class="eyebrow">AGCF Impact Stories</span>
+        <h1>Josh's Story: A Dream of Becoming a Doctor</h1>
+        <p>
+          A meeting that reminded us why every child deserves the
+          opportunity to learn, grow and pursue a dream.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <article class="josh-story">
+          <p class="story-meta">
+            <strong>Education Support</strong> &nbsp;|&nbsp;
+            All God's Children Foundation
+          </p>
+
+          <h2>A Meeting I Will Not Forget</h2>
+
+          <p>
+            I don't usually share stories like this, but this meeting
+            felt important.
+          </p>
+
+          <p>
+            Recently, I met Josh, a 10-year-old boy who, at the time
+            we met, had never had the opportunity to attend school.
+          </p>
+
+          <p>
+            One Wednesday morning, while other children were in class,
+            I found him at a dumping site collecting plastic bottles.
+            Not by choice, but because this was what life had required
+            him to do to survive.
+          </p>
+
+          <h2>One Question, One Powerful Dream</h2>
+
+          <p>
+            I asked Josh why he wasn't in school. His answer stayed
+            with me: he had never had the opportunity.
+          </p>
+
+          <p>
+            Then I asked him what he wanted to become when he grew up.
+            His answer came without hesitation.
+          </p>
+
+          <div class="josh-quote">
+            <p>"Doctor."</p>
+          </div>
+
+          <p>
+            That one word carried so much hope. Despite the circumstances
+            he was facing, Josh had a dream for his future.
+          </p>
+
+          <h2>The Reality Behind His Dream</h2>
+
+          <p>
+            Josh told me that he collected plastic bottles every day
+            to help him survive. He earned about UGX 150 per kilogram.
+            That small amount represented the difficult circumstances
+            surrounding his access to education.
+          </p>
+
+          <p>
+            We spent time talking about his life, his family and his
+            hopes. We also shared a simple lunch. It was a small moment,
+            but it gave me an opportunity to listen to him and learn
+            more about his situation.
+          </p>
+
+          <h2>Why AGCF Exists</h2>
+
+          <p>
+            As I left, one thought stayed with me: this should not be
+            the limit of a child's possibilities.
+          </p>
+
+          <p>
+            Meeting Josh reminded me why I started building
+            All God's Children Foundation. AGCF seeks to support
+            children who want to learn but face circumstances that
+            make education difficult to access.
+          </p>
+
+          <p>
+            I understand what it means to have a dream and not have
+            the support needed to pursue it. Every child deserves
+            an opportunity to discover their abilities and work toward
+            a brighter future.
+          </p>
+
+          <h2>Every Child Deserves a Chance</h2>
+
+          <p>
+            Josh's story is a reminder that behind every child is a
+            person with hopes, abilities and dreams. A child's
+            circumstances should not be the only thing that defines
+            what is possible for their future.
+          </p>
+
+          <p>
+            Through its education support work, AGCF hopes to help
+            children and families facing barriers to learning.
+            Meaningful progress requires practical support,
+            community involvement and people who believe every child
+            deserves an opportunity.
+          </p>
+
+          <p>
+            If Josh's story speaks to you, you can help by learning
+            more about AGCF's work, sharing our mission or contacting
+            us to explore ways to support children's education.
+          </p>
+
+          <p><strong>Every Child, Every Chance.</strong></p>
+        </article>
+
+        <section aria-labelledby="josh-gallery-title" class="section">
+          <h2 id="josh-gallery-title">Meeting Josh</h2>
+          <p>
+            These photographs document the meeting and a step toward
+            supporting Josh's educational journey.
+          </p>
+
+          <div class="josh-gallery">
+
+            <figure>
+              <img src="images/josh-1.jpg"
+                   alt="Josh collecting plastic bottles at a dumping site"
+                   loading="lazy">
+              <figcaption>
+                <strong>A Day in Josh's Life</strong>
+                The circumstances that prompted a conversation about
+                his hopes and access to education.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/josh-2.jpg"
+                   alt="An AGCF team member speaking with Josh"
+                   loading="lazy">
+              <figcaption>
+                <strong>Taking Time to Listen</strong>
+                A conversation about Josh's life, family and dreams.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img class="josh-full-photo"
+                   src="images/josh.png"
+                   alt="Josh shown in the full photograph holding a school item"
+                   loading="lazy">
+              <figcaption>
+                <strong>A Step Toward Education</strong>
+                A school item representing the importance of creating
+                opportunities for children to learn.
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <p class="story-note">
+            To protect Josh's dignity and privacy, publish his name,
+            photographs and personal story only with appropriate
+            parent or guardian permission and consideration of his
+            own wishes. Avoid sharing his precise location, school
+            details or other identifying information that is not
+            necessary to tell his story.
+          </p>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="josh-cta">
+      <div class="container">
+        <h2>Help Make Education Possible</h2>
+        <p>
+          Every child deserves the chance to learn and pursue their
+          dreams. Learn more about AGCF's education support work or
+          contact us to discuss how you can help.
+        </p>
+        <a class="button button-green" href="education-support.html">
+          Explore Education Support
+        </a>
+        <a class="button" href="contact.html">
+          Contact AGCF
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h2>All God's Children Foundation</h2>
+          <p>Every Child, Every Chance.</p>
+          <p>
+            Community-rooted work supporting children through education,
+            family support, mentorship and water-safety awareness in Uganda.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="news.html">News &amp; Updates</a></li>
+            <li><a href="impact-stories.html">Impact Stories</a></li>
+            <li><a href="gallery.html">Photo &amp; Video Gallery</a></li>
+            <li><a href="coffee.html">Coffee for Education</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact AGCF</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:allgodschildrenfoundation@gmail.com">
+                allgodschildrenfoundation@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/256701973542">
+                WhatsApp: +256 701 973542
+              </a>
+            </li>
+            <li>Kamengo Sub-county, Mpigi District, Uganda</li>
+          </ul>
+          <p><small>Registration is currently in progress in Uganda.</small></p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="current-year">2026</span>
+        All God's Children Foundation.
+        Please contact AGCF for current donation instructions.
+      </div>
+    </div>
+  </footer>
+  
+
+<script src="script.js"></script>
+</body>
+</html>

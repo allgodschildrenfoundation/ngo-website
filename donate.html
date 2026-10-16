@@ -1,159 +1,468 @@
+~~~html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate | All God’s Children Foundation</title>
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Support All God's Children Foundation in advancing children's education, water safety, safe water access and community wellbeing in Uganda.">
+  <title>Donate to AGCF | All God's Children Foundation</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .donate-hero {
+      background: linear-gradient(135deg, #12366b, #1d4e89);
+      color: #fff;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .donate-hero h1,
+    .donate-hero p,
+    .donate-hero .eyebrow {
+      color: #fff;
+    }
+    .donate-hero h1 {
+      margin: 12px 0;
+    }
+    .donate-hero p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      line-height: 1.8;
+    }
+    .donate-intro {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .donation-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 4px 18px rgba(18, 54, 107, 0.09);
+      height: 100%;
+    }
+    .donation-card h3 {
+      color: #12366b;
+      margin-top: 0;
+    }
+    .donation-card p {
+      color: #333;
+      line-height: 1.75;
+    }
+    .donation-note {
+      background: #f0f5f2;
+      border-left: 5px solid #237a4b;
+      padding: 22px;
+      border-radius: 8px;
+      color: #24332b;
+      line-height: 1.8;
+    }
+    .donate-cta {
+      background: #12366b;
+      color: #fff;
+      border-radius: 12px;
+      padding: 36px 24px;
+      text-align: center;
+    }
+    .donate-cta h2,
+    .donate-cta p {
+      color: #fff;
+    }
+    .donate-cta p {
+      max-width: 750px;
+      margin: 0 auto 22px;
+      line-height: 1.8;
+    }
+    .donate-cta .button-outline {
+      color: #fff;
+      border-color: #fff;
+    }
+    .donate-cta .button-outline:hover {
+      background: #fff;
+      color: #12366b;
+    }
+    .donate-page p,
+    .donate-page li {
+      line-height: 1.8;
+    }
+    .donate-page a:focus-visible,
+    .donate-page button:focus-visible {
+      outline: 3px solid #f2c14e;
+      outline-offset: 3px;
+    }
+  </style>
 </head>
+<body>
 
-<body class="bg-gray-100 text-gray-800">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- NAVIGATION -->
-<nav class="bg-blue-700 text-white px-6 py-4 shadow-md">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
+<header class="site-header">
+  <div class="nav-wrap">
 
-    <div class="flex items-center gap-3 whitespace-nowrap">
-      <img src="images/logo.png" class="h-10" alt="Logo">
-      <span class="text-xl font-bold">All God’s Children Foundation</span>
-    </div>
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
+      </span>
+    </a>
 
-    <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
 
-    <div id="menu"
-      class="hidden md:flex md:items-center md:gap-6 font-semibold
-      absolute md:static top-16 left-0 w-full md:w-auto
-      bg-blue-700 md:bg-transparent p-6 md:p-0
-      flex-col md:flex-row space-y-3 md:space-y-0">
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
 
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="about.html" class="hover:text-yellow-300">About</a>
-      <a href="programs.html" class="hover:text-yellow-300">Programs</a>
-      <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
-      <a href="coffee.html" class="hover:text-yellow-300 whitespace-nowrap">
-        Coffee for Education
-      </a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-      <a href="donate.html" class="text-yellow-300">Donate</a>
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
 
-    </div>
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
+
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
   </div>
-</nav>
-
-<script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
-
-<!-- HEADER -->
-<header class="bg-white text-center py-14 shadow px-4">
-
-  <h1 class="text-4xl font-bold text-blue-700">
-    Support a Child’s Education
-  </h1>
-
-  <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-    Your donation helps children access school fees, meals, and essential learning materials in Uganda.
-  </p>
-
 </header>
 
-<!-- WHY DONATE -->
-<section class="max-w-5xl mx-auto bg-white p-6 md:p-10 mt-6 rounded-xl shadow">
+<main id="main-content" class="donate-page">
 
-  <h2 class="text-2xl font-bold text-blue-700 mb-4">Why Your Support Matters</h2>
+  <section class="donate-hero">
+    <div class="container">
+      <span class="eyebrow">Support AGCF</span>
+      <h1>Every Child, Every Chance</h1>
+      <p>
+        Your generosity can help All God's Children Foundation work alongside
+        families and communities in Uganda to support children's education,
+        promote water safety and strengthen children's wellbeing.
+      </p>
+      <a class="button button-gold" href="#ways-to-support">Ways to Support</a>
+      <a class="button button-outline" href="contact.html">Contact AGCF</a>
+    </div>
+  </section>
 
-  <p class="text-gray-700 leading-relaxed">
-    Many children in Uganda struggle to stay in school due to poverty.
-    Your support helps remove barriers like school fees, food, and learning materials.
-    <br><br>
-    Every contribution helps a child stay in school and build a better future.
-  </p>
+  <section class="section">
+    <div class="container">
+      <div class="donate-intro">
+        <span class="eyebrow">Make a Difference</span>
+        <h2>Help Create Opportunities for Children</h2>
+        <p>
+          Many families face challenges in meeting children's educational
+          and other essential needs. AGCF works with local communities to
+          identify needs and develop practical responses that support
+          children to learn, stay safe and grow.
+        </p>
+        <p>
+          We welcome people, churches, businesses, community groups and
+          organisations who would like to contribute their resources,
+          skills, time or networks.
+        </p>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <section class="section" id="ways-to-support" style="background:#f0f5f2;">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Ways to Give</span>
+        <h2>Choose How You Would Like to Help</h2>
+        <p>
+          Support can take different forms. Contact us to discuss an
+          appropriate way to contribute to AGCF's work.
+        </p>
+      </div>
 
-<!-- DONATION LEVELS -->
-<section class="max-w-5xl mx-auto bg-white p-6 md:p-10 mt-6 rounded-xl shadow">
+      <div class="grid grid-3">
 
-  <h2 class="text-2xl font-bold text-blue-700 mb-4">Where Your Donation Goes</h2>
+        <article class="donation-card">
+          <h3>Education Support</h3>
+          <p>
+            Help with education-related needs such as school fees,
+            uniforms, scholastic materials and essential school items
+            for children facing financial challenges.
+          </p>
+          <a class="button button-green" href="education-support.html">
+            Explore Education Support
+          </a>
+        </article>
 
-  <div class="space-y-4 text-gray-700">
+        <article class="donation-card">
+          <h3>Water Safety</h3>
+          <p>
+            Help advance water-safety awareness and drowning-prevention
+            education for children and communities, including the planned
+            pilot across five primary schools in Kamengo.
+          </p>
+          <a class="button button-green" href="water-safety.html">
+            Explore Water Safety
+          </a>
+        </article>
 
-    <p>💛 <b>$50</b> — School supplies (books, pens, exercise books, basic materials)</p>
+        <article class="donation-card">
+          <h3>Community Wellbeing</h3>
+          <p>
+            Contribute to community-focused work supporting families,
+            children's development, mentorship and local initiatives
+            that respond to identified needs.
+          </p>
+          <a class="button button-green" href="what-we-do.html">
+            Explore Our Programmes
+          </a>
+        </article>
 
-    <p>💛 <b>$35</b> — School meals support for a child (full term support)</p>
+        <article class="donation-card">
+          <h3>Give Essential Supplies</h3>
+          <p>
+            Schools and families may need practical items that help
+            children participate in learning. Contact us to discuss
+            current needs before purchasing or delivering supplies.
+          </p>
+          <a class="button button-green" href="contact.html">
+            Discuss Supplies
+          </a>
+        </article>
 
-    <p>💛 <b>$60</b> — Half school fees support</p>
+        <article class="donation-card">
+          <h3>Offer Skills or Services</h3>
+          <p>
+            Share professional skills, training, technical knowledge
+            or practical services that could help strengthen our
+            programmes and community activities.
+          </p>
+          <a class="button button-green" href="volunteer.html">
+            Volunteer With AGCF
+          </a>
+        </article>
 
-    <p>💛 <b>$145</b> — Half support package (school fees + meals + school items)</p>
+        <article class="donation-card">
+          <h3>Build a Partnership</h3>
+          <p>
+            Churches, businesses, schools, community groups and
+            organisations can explore opportunities to work with AGCF
+            in ways that fit shared goals and resources.
+          </p>
+          <a class="button button-green" href="partner-with-us.html">
+            Partner With Us
+          </a>
+        </article>
 
-    <p>💛 <b>$120</b> — Full school fees for a vulnerable child</p>
+      </div>
+    </div>
+  </section>
 
-    <p>💛 <b>$205</b> — Full school package (fees + meals + materials)</p>
+  <section class="section">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Our Commitment</span>
+        <h2>Responsible and Transparent Support</h2>
+        <p>
+          We recognise that every contribution represents trust. AGCF aims
+          to communicate clearly about programme needs, use contributions
+          responsibly and share appropriate updates about activities and
+          progress.
+        </p>
+        <p>
+          Before making a contribution, please contact us to confirm the
+          current need, the intended use of the support and the appropriate
+          method for contributing.
+        </p>
+        <p>
+          The foundation's registration is currently in progress in Uganda.
+          We will provide relevant organisational and contribution details
+          directly when responding to enquiries.
+        </p>
+      </div>
 
+      <div>
+        <div class="donation-card">
+          <h3>Before You Contribute</h3>
+          <ul class="check-list">
+            <li>Contact AGCF to discuss the intended support.</li>
+            <li>Confirm the current programme need and arrangements.</li>
+            <li>Agree on how the contribution will be used.</li>
+            <li>Ask how updates about the supported activity will be shared.</li>
+          </ul>
+          <a class="button button-green" href="mailto:allgodschildrenfoundation@gmail.com?subject=Supporting%20AGCF">
+            Email AGCF
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="donation-note">
+        <strong>Important:</strong> Please contact AGCF before sending money
+        or purchasing items. We will discuss the intended purpose and
+        appropriate arrangements with you. Do not send funds to an account
+        unless its details and intended use have been confirmed directly
+        with AGCF.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="donate-cta">
+        <span class="eyebrow">Let's Work Together</span>
+        <h2>Every Contribution Can Be a Step Forward</h2>
+        <p>
+          Whether you want to support education, help promote water safety,
+          provide essential supplies or explore a partnership, we would
+          be glad to hear from you.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="button button-gold"
+             href="mailto:allgodschildrenfoundation@gmail.com?subject=Supporting%20AGCF">
+            Email AGCF
+          </a>
+          <a class="button button-outline"
+             href="https://wa.me/256701973542" target="_blank" rel="noopener noreferrer">
+            WhatsApp Us
+          </a>
+          <a class="button button-outline" href="coffee.html">
+            Coffee for Education
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <p class="muted center">
+        AGCF is committed to protecting children's dignity and privacy.
+        We avoid sharing children's personal information and seek to
+        communicate about our work respectfully and responsibly.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <h2>All God's Children Foundation</h2>
+        <p><strong>Every Child, Every Chance.</strong></p>
+        <p>
+          Supporting children's education, safety and wellbeing
+          in partnership with families and communities in Uganda.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">About AGCF</a></li>
+          <li><a href="what-we-do.html">Our Programmes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="news.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Us</h3>
+        <p>
+          Kamengo Sub-county,<br>
+          Mpigi District, Uganda
+        </p>
+        <p>
+          Email:
+          <a href="mailto:allgodschildrenfoundation@gmail.com">
+            allgodschildrenfoundation@gmail.com
+          </a>
+        </p>
+        <p>
+          Phone:
+          <a href="tel:+256701973542">+256 701 973542</a>
+        </p>
+        <p><a href="coffee.html">Coffee for Education</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year">2026</span>
+        All God's Children Foundation. All rights reserved.
+      </p>
+      <p>Registration is currently in progress in Uganda.</p>
+    </div>
   </div>
-
-  <p class="mt-6 text-gray-600">
-    Every donation directly transforms a child’s education journey.
-  </p>
-
-</section>
-
-<!-- TRANSPARENCY -->
-<section class="max-w-5xl mx-auto bg-white p-6 md:p-10 mt-6 rounded-xl shadow">
-
-  <h2 class="text-2xl font-bold text-blue-700 mb-4">Transparency & Trust</h2>
-
-  <p class="text-gray-700 leading-relaxed">
-    All donations go directly into supporting children’s education, school needs, and welfare.
-    We are committed to accountability and real impact in every community we serve.
-  </p>
-
-</section>
-
-<!-- CONTACT -->
-<section class="max-w-5xl mx-auto bg-white p-6 md:p-10 mt-6 rounded-xl shadow text-center">
-
-  <h2 class="text-2xl font-bold text-blue-700 mb-4">How to Donate</h2>
-
-  <p class="mb-2"><b>Bank:</b> Centenary Bank</p>
-  <p class="mb-2"><b>Account Name:</b> Namuwonge Alice</p>
-  <p class="mb-2"><b>Account Number:</b> 3203162174</p>
-  <p class="mb-2"><b>Mobile Money:</b> +256 757 842799</p>
-  <p class="mb-2"><b>Mobile Money:</b> +256 791 709765</p>
-  <p class="mb-2"><b>Email:</b> allgodschildrenfoundation@gmail.com</p>
-
-  <a href="https://wa.me/256757842799"
-     class="inline-block mt-5 bg-green-500 text-white px-6 py-3 rounded-xl font-bold">
-    Donate via WhatsApp
-  </a>
-
-</section>
-
-<!-- FINAL CTA -->
-<section class="bg-blue-700 text-white text-center py-14 mt-10 px-4">
-
-  <h2 class="text-3xl font-bold">One Donation Changes a Life</h2>
-
-  <p class="mt-3 max-w-xl mx-auto">
-    Education is the key to breaking the cycle of poverty.
-  </p>
-
-  <a href="https://wa.me/256757842799"
-     class="inline-block mt-6 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold">
-    Support Now
-  </a>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="text-center p-4 text-gray-600">
-  © 2026 All God’s Children Foundation
 </footer>
 
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
+~~~

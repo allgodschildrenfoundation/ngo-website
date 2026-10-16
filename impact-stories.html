@@ -1,0 +1,829 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12366b">
+  <meta name="description" content="Discover the stories of children and families supported by All God's Children Foundation, including education support, family care and safe water access in Uganda.">
+  <title>Impact Stories | All God's Children Foundation</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .impact-hero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      padding: 70px 20px;
+      color: #fff;
+      text-align: center;
+      background-color: #12366b;
+      background-image:
+        linear-gradient(rgba(8, 29, 62, .78), rgba(8, 29, 62, .78)),
+        url("images/borehole-community-handover-05.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .impact-hero-content {
+      width: min(850px, 100%);
+      margin: 0 auto;
+    }
+
+    .impact-hero .eyebrow {
+      color: #ffe08a;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .impact-hero h1 {
+      margin: 14px 0;
+      color: #fff;
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 1.15;
+    }
+
+    .impact-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .stories-intro {
+      max-width: 780px;
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+
+    .stories-intro h2,
+    .section-heading {
+      color: #12366b;
+    }
+
+    .stories-intro p {
+      line-height: 1.8;
+    }
+
+    .story-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .story-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e3e9f0;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(18, 54, 107, .08);
+    }
+
+    .story-card-image {
+      width: 100%;
+      height: 235px;
+      display: block;
+      object-fit: cover;
+      background: #edf1f5;
+    }
+
+    .story-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 23px;
+    }
+
+    .story-category {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 4px 10px;
+      color: #185d38;
+      background: #eaf5ed;
+      border-radius: 4px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+    }
+
+    .story-card h3 {
+      margin: 0 0 12px;
+      color: #12366b;
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+
+    .story-card p {
+      margin: 0 0 20px;
+      line-height: 1.75;
+    }
+
+    .story-read-more {
+      display: inline-block;
+      margin-top: auto;
+      color: #237a4b;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .story-read-more:hover {
+      text-decoration: underline;
+    }
+
+    .story-read-more:focus-visible {
+      outline: 3px solid #f2c14e;
+      outline-offset: 4px;
+    }
+
+    .story-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      margin: 18px 0 25px;
+      color: #555;
+      font-size: .94rem;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(230px, 1fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    .story-content h2 {
+      margin-top: 30px;
+      color: #12366b;
+    }
+
+    .story-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .story-content p,
+    .story-content li {
+      line-height: 1.85;
+    }
+
+    .story-sidebar {
+      padding: 24px;
+      border-radius: 12px;
+      background: #f3f6fa;
+      border-top: 4px solid #237a4b;
+    }
+
+    .story-sidebar h2 {
+      margin-top: 0;
+      color: #12366b;
+      font-size: 1.3rem;
+    }
+
+    .story-sidebar p {
+      line-height: 1.75;
+    }
+
+    .story-timeline {
+      padding-left: 22px;
+    }
+
+    .story-timeline li {
+      margin-bottom: 16px;
+      padding-left: 4px;
+    }
+
+    .story-timeline strong {
+      color: #12366b;
+    }
+
+    .borehole-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .borehole-gallery figure {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #f4f6f8;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+    }
+
+    .borehole-gallery figure:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .borehole-gallery img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .borehole-gallery figure:first-child img {
+      height: 360px;
+    }
+
+    .borehole-gallery figcaption {
+      padding: 14px 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .borehole-gallery figcaption strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #12366b;
+    }
+
+    .story-callout {
+      margin: 30px 0;
+      padding: 22px 24px;
+      border-left: 4px solid #237a4b;
+      border-radius: 4px;
+      background: #f3f8f4;
+    }
+
+    .story-callout p {
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .story-cta {
+      padding: 45px 20px;
+      text-align: center;
+      background: #f3f6fa;
+    }
+
+    .story-cta h2 {
+      color: #12366b;
+    }
+
+    .story-cta p {
+      max-width: 700px;
+      margin: 0 auto 22px;
+      line-height: 1.8;
+    }
+
+    .safeguarding-note {
+      margin-top: 25px;
+      color: #555;
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .story-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .story-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .impact-hero {
+        min-height: 360px;
+        padding: 55px 20px;
+      }
+
+      .story-cards,
+      .borehole-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .borehole-gallery figure:first-child {
+        grid-column: auto;
+      }
+
+      .borehole-gallery img,
+      .borehole-gallery figure:first-child img {
+        height: 250px;
+      }
+
+      .story-card-image {
+        height: 230px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+  <div class="nav-wrap">
+
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
+
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
+
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+
+    <section class="impact-hero">
+      <div class="impact-hero-content">
+        <span class="eyebrow">AGCF Impact Stories</span>
+        <h1>Every Family Has a Story</h1>
+        <p>
+          Meet the children and families behind our work and learn why
+          education, family support and access to safe water matter.
+        </p>
+      </div>
+    </section>
+
+    <!-- STORY COLLECTION -->
+    <section class="section" aria-labelledby="stories-heading">
+      <div class="container">
+
+        <div class="stories-intro">
+          <h2 id="stories-heading">Stories of Hope, Resilience and Opportunity</h2>
+          <p>
+            At All God's Children Foundation, we believe every child deserves
+            a chance to learn, grow and thrive. These stories share some of
+            the challenges faced by children and families in our communities,
+            the support AGCF has provided, and the work that still lies ahead.
+          </p>
+        </div>
+
+        <div class="story-cards">
+
+          <!-- BOREHOLE STORY -->
+          <article class="story-card">
+            <img class="story-card-image"
+              src="images/borehole-community-handover-05.jpg"
+              alt="Community borehole project at handover in Kamengo"
+              loading="lazy">
+
+            <div class="story-card-body">
+              <span class="story-category">Safe Water Access</span>
+              <h3>From Manual Digging to Community Handover</h3>
+              <p>
+                Follow the borehole project in Kamengo, from the initial
+                groundwork in March 2025 to community handover in April.
+                The project aimed to improve access to clean water and
+                reduce children's exposure to dangerous water sources.
+              </p>
+              <a class="story-read-more" href="#borehole-story">
+                Read the full story →
+              </a>
+            </div>
+          </article>
+
+          <!-- JOSH STORY -->
+          <article class="story-card">
+            <img class="story-card-image"
+              src="images/josh-1.jpg"
+              alt="Josh collecting plastic bottles"
+              loading="lazy">
+
+            <div class="story-card-body">
+              <span class="story-category">Education and Child Support</span>
+              <h3>Josh's Story: A Dream of Becoming a Doctor</h3>
+              <p>
+                Josh is a young boy who dreams of becoming a doctor but
+                has faced barriers to education. His story reminds us
+                why children need opportunities to learn and build a future.
+              </p>
+              <a class="story-read-more" href="josh-story.html">
+                Read Josh's story →
+              </a>
+            </div>
+          </article>
+
+          <!-- GRANDMOTHER STORY -->
+          <article class="story-card">
+            <img class="story-card-image"
+              src="images/maama.jpg"
+              alt="Grandmother featured in AGCF's family support story"
+              loading="lazy">
+
+            <div class="story-card-body">
+              <span class="story-category">Family and Community Support</span>
+              <h3>A Grandmother's Strength</h3>
+              <p>
+                Living with a disability, this grandmother continues
+                caring for her grandchildren and working as she can.
+                AGCF is supporting one child's education and seeking
+                help to establish a small shop for the family.
+              </p>
+              <a class="story-read-more" href="family-2-story.html">
+                Read her story →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL BOREHOLE STORY -->
+    <section class="section" id="borehole-story" aria-labelledby="borehole-heading">
+      <div class="container">
+
+        <h2 class="section-heading" id="borehole-heading">
+          From Manual Digging to Community Handover
+        </h2>
+
+        <p>
+          Improving access to clean water and helping protect children
+          from dangerous water sources in Kamengo, Uganda.
+        </p>
+
+        <div class="story-meta">
+          <span><strong>Location:</strong> Kamengo, Mpigi District, Uganda</span>
+          <span><strong>Project period:</strong> March–April 2025</span>
+          <span><strong>Implemented by:</strong> AGCF</span>
+        </div>
+
+        <div class="story-layout">
+          <article class="story-content">
+
+            <h2>A Community's Journey Toward Safer Water Access</h2>
+
+            <p>
+              Access to clean water is essential for the health, safety
+              and wellbeing of children and families. When safe water
+              sources are difficult to access, communities may depend on
+              alternatives such as deep ponds and local wells. These
+              locations can expose children to dangerous conditions and
+              the risk of drowning.
+            </p>
+
+            <p>
+              Recognising the importance of safe water access,
+              All God's Children Foundation (AGCF) implemented a borehole
+              project in the Kamengo community, Mpigi District, Uganda.
+              The project aimed to improve access to clean water while
+              helping reduce children's exposure to hazardous water sources.
+            </p>
+
+            <h2>From Groundwork to Community Handover</h2>
+
+            <p>
+              The borehole project progressed through several stages
+              during March and April 2025. Photographs document the
+              work from the initial groundwork through to community handover.
+            </p>
+
+            <ol class="story-timeline">
+              <li>
+                <strong>6 March 2025 — Manual digging</strong><br>
+                Initial groundwork began.
+              </li>
+              <li>
+                <strong>16 March 2025 — Drilling</strong><br>
+                The project advanced to the drilling stage.
+              </li>
+              <li>
+                <strong>19 March 2025 — Pump installation</strong><br>
+                The pump was installed as part of the water-point infrastructure.
+              </li>
+              <li>
+                <strong>22 March 2025 — Borehole top construction</strong><br>
+                Work continued on the borehole's upper structure.
+              </li>
+              <li>
+                <strong>1 April 2025 — Community handover</strong><br>
+                The project reached its community handover stage.
+              </li>
+            </ol>
+
+            <h2>Improving Water Access and Children's Safety</h2>
+
+            <p>
+              The project was intended to provide the community with
+              improved access to clean water and reduce the need for
+              children to approach potentially dangerous water sources.
+            </p>
+
+            <p>
+              Deep ponds and local wells can pose serious drowning hazards,
+              particularly when children approach them while collecting
+              water or accompanying family members. Improving access to
+              a borehole offers an alternative water source and supports
+              wider efforts to protect children from preventable
+              water-related dangers.
+            </p>
+
+            <p>
+              Safe water access and water-safety education are both
+              important. Communities need accessible water sources, while
+              children also need to understand water hazards and how to
+              stay safe around them.
+            </p>
+
+            <div class="story-callout">
+              <p>
+                <strong>Why this matters:</strong> Improving access to a
+                community water point can support daily needs while
+                contributing to wider efforts to reduce children's
+                exposure to dangerous water environments.
+              </p>
+            </div>
+
+            <h2>A Step Toward a Safer Community</h2>
+
+            <p>
+              For AGCF, this project represents more than the construction
+              of a water point. It reflects a commitment to addressing
+              community needs in ways that connect children's safety,
+              family wellbeing and access to essential resources.
+            </p>
+
+            <p>
+              Sustaining these benefits requires responsible use, proper
+              maintenance and attention to water quality. Continued
+              community involvement is important to help protect the
+              water point and support its long-term usefulness.
+            </p>
+
+            <h2>Looking Ahead</h2>
+
+            <p>
+              AGCF works toward communities where children can learn,
+              grow and participate in everyday life with fewer
+              preventable risks. The borehole project in Kamengo
+              demonstrates how improving access to essential resources
+              can form part of a wider commitment to child protection
+              and community development.
+            </p>
+
+            <p>
+              By documenting this journey, AGCF aims to share its work
+              transparently, recognise community participation and
+              highlight the importance of practical, community-rooted
+              solutions.
+            </p>
+
+            <p><strong>Every Child, Every Chance.</strong></p>
+
+          </article>
+
+          <aside class="story-sidebar">
+            <h2>Project at a Glance</h2>
+            <p><strong>Programme</strong><br>Safe Water Access</p>
+            <p><strong>Location</strong><br>Kamengo, Mpigi District, Uganda</p>
+            <p><strong>Project milestones</strong><br>March–April 2025</p>
+            <p><strong>Implemented by</strong><br>All God's Children Foundation</p>
+            <p>
+              <strong>Purpose</strong><br>
+              Improve access to clean water and help reduce children's
+              exposure to dangerous water sources.
+            </p>
+            <a class="button button-green" href="safe-water-access.html">
+              Explore Safe Water Access
+            </a>
+          </aside>
+        </div>
+
+        <section aria-labelledby="project-gallery-title" class="section">
+          <h2 id="project-gallery-title">The Borehole Project in Pictures</h2>
+          <p>
+            These photographs document key stages of the project, from
+            manual digging to community handover.
+          </p>
+
+          <div class="borehole-gallery">
+
+            <figure>
+              <img src="images/borehole-manual-digging-01.jpg"
+                alt="Initial manual digging during the borehole project"
+                loading="lazy">
+              <figcaption>
+                <strong>1. Manual Digging</strong>
+                <time datetime="2025-03-06">6 March 2025</time>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/borehole-drilling-03.jpg"
+                alt="Drilling work during the community borehole project"
+                loading="lazy">
+              <figcaption>
+                <strong>2. Drilling</strong>
+                <time datetime="2025-03-16">16 March 2025</time>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/borehole-pump-installation-02.jpg"
+                alt="Installation of the borehole water pump"
+                loading="lazy">
+              <figcaption>
+                <strong>3. Pump Installation</strong>
+                <time datetime="2025-03-19">19 March 2025</time>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/borehole-headworks-construction-04.jpg"
+                alt="Construction of the upper structure of the borehole"
+                loading="lazy">
+              <figcaption>
+                <strong>4. Borehole Top Construction</strong>
+                <time datetime="2025-03-22">22 March 2025</time>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/borehole-community-handover-05.jpg"
+                alt="Community borehole project at handover"
+                loading="lazy">
+              <figcaption>
+                <strong>5. Community Handover</strong>
+                <time datetime="2025-04-01">1 April 2025</time>
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <p class="safeguarding-note">
+            AGCF respects the dignity and privacy of children and community
+            members. Photographs should be shared only with appropriate
+            permission and in line with child-safeguarding practices.
+          </p>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="story-cta">
+      <div class="container">
+        <h2>Help Us Build Safer, More Supportive Communities</h2>
+        <p>
+          Every child deserves opportunities to learn, grow and thrive.
+          Explore our programmes or contact AGCF to discuss ways to support
+          children and families.
+        </p>
+        <a class="button button-green" href="what-we-do.html">
+          Explore Our Programmes
+        </a>
+        <a class="button" href="contact.html">
+          Contact AGCF
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h2>All God's Children Foundation</h2>
+          <p>Every Child, Every Chance.</p>
+          <p>
+            Community-rooted work supporting children through education,
+            family support, mentorship and water-safety awareness in Uganda.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="news.html">News &amp; Updates</a></li>
+            <li><a href="impact-stories.html">Impact Stories</a></li>
+            <li><a href="josh-story.html">Josh's Story</a></li>
+            <li><a href="family-2-story.html">A Grandmother's Story</a></li>
+            <li><a href="gallery.html">Photo &amp; Video Gallery</a></li>
+            <li><a href="coffee.html">Coffee for Education</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact AGCF</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:allgodschildrenfoundation@gmail.com">
+                allgodschildrenfoundation@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/256701973542">
+                WhatsApp: +256 701 973 542
+              </a>
+            </li>
+            <li>Kamengo Sub-county, Mpigi District, Uganda</li>
+          </ul>
+          <p><small>Registration is currently in progress in Uganda.</small></p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="current-year">2026</span>
+        All God's Children Foundation.
+        Please contact AGCF for current donation instructions.
+        Photos are shared subject to appropriate consent and child-safeguarding practices.
+      </div>
+    </div>
+  </footer>
+  
+
+<script src="script.js"></script>
+</body>
+</html>

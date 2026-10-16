@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12366b">
+
+  <title>School Supplies Drive | All God's Children Foundation</title>
+
+  <meta
+    name="description"
+    content="All God's Children Foundation supports children in Kamengo, Uganda, with essential school supplies to help them learn and thrive."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
+    }
+
+    body {
+      margin: 0;
+      width: 100%;
+      overflow-x: clip;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* Navigation matched to index.html */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+    }
+
+    .nav-wrap {
+      width: 100%;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .nav-links {
+      min-width: 0;
+      flex: 0 1 auto;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      overflow: visible;
+    }
+
+    .nav-item {
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .nav-item > .nav-menu-toggle {
+      white-space: nowrap;
+    }
+
+    .nav-item > .nav-menu-toggle.donate-link {
+      background: #237a4b;
+      color: #fff;
+    }
+
+    .nav-item > .nav-menu-toggle.donate-link:hover,
+    .nav-item > .nav-menu-toggle.donate-link[aria-expanded="true"] {
+      background: #185d38;
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      z-index: 3000;
+    }
+
+    @media (min-width: 981px) and (max-width: 1250px) {
+      .nav-wrap {
+        gap: 0.5rem;
+        padding-inline: 0.75rem;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        max-width: 155px;
+        font-size: 0.82rem;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-item > .nav-menu-toggle {
+        padding: 0.65rem 0.4rem;
+        font-size: 0.77rem;
+        gap: 0.2rem;
+      }
+
+      .nav-item > .nav-menu-toggle.donate-link {
+        padding: 0.65rem 0.45rem;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-item {
+        width: 100%;
+      }
+
+      .nav-item > .nav-menu-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .nav-item > .dropdown-menu {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin-top: 0;
+        box-shadow: none;
+      }
+    }
+
+    /* School Supplies Drive hero with background image */
+    .supplies-hero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 440px;
+      padding: 75px 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #12366b;
+      background-image:
+        linear-gradient(
+          rgba(8, 29, 62, 0.76),
+          rgba(8, 29, 62, 0.76)
+        ),
+        url("images/image7.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .supplies-hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .supplies-hero h1 {
+      margin: 0 0 18px;
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+    }
+
+    .supplies-hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #fff;
+      font-size: 1.08rem;
+      line-height: 1.9;
+    }
+
+    /* Main sections */
+    .supplies-section {
+      padding: 45px 20px;
+    }
+
+    .supplies-intro {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.8;
+      color: #303b49;
+    }
+
+    .supplies-intro h2,
+    .supplies-details h2 {
+      color: #12366b;
+      line-height: 1.4;
+    }
+
+    .supplies-intro h2 {
+      margin: 0 0 15px;
+    }
+
+    /* Photo gallery */
+    .supplies-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1050px;
+      margin: 35px auto 0;
+    }
+
+    .supplies-photo {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e1e7ee;
+      border-radius: 10px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.09);
+    }
+
+    .supplies-photo img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: #f0f3f6;
+    }
+
+    .supplies-photo figcaption {
+      padding: 14px 16px;
+      color: #12366b;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    /* Programme details */
+    .supplies-details {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #303b49;
+    }
+
+    .supplies-details h2 {
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .supplies-details h2:first-child {
+      margin-top: 0;
+    }
+
+    /* Call to action */
+    .supplies-cta {
+      padding: 45px 20px;
+      text-align: center;
+      background: #f3f6fa;
+    }
+
+    .supplies-cta h2 {
+      margin: 0 0 12px;
+      color: #12366b;
+    }
+
+    .supplies-cta p {
+      max-width: 750px;
+      margin: 12px auto 22px;
+      line-height: 1.8;
+      color: #303b49;
+    }
+
+    .supplies-button {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 5px;
+      background: #12366b;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .supplies-button:hover,
+    .supplies-button:focus-visible {
+      background: #0b2852;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 650px) {
+      .supplies-hero {
+        min-height: 360px;
+        padding: 55px 18px;
+      }
+
+      .supplies-hero p {
+        font-size: 1rem;
+      }
+
+      .supplies-section {
+        padding: 32px 18px;
+      }
+
+      .supplies-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .supplies-photo img {
+        height: 240px;
+      }
+
+      .supplies-cta {
+        padding: 35px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- MAIN NAVIGATION: MATCHES index.html -->
+  <header class="site-header">
+  <div class="nav-wrap">
+
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
+
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
+
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+
+    <!-- HERO WITH image7.png BACKGROUND -->
+    <section class="supplies-hero">
+      <div class="supplies-hero-content">
+
+        <h1>School Supplies Drive</h1>
+
+        <p>
+          Helping children access the essential learning materials they need
+          to participate in school, build confidence and pursue a brighter future.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="supplies-section">
+      <div class="supplies-intro">
+
+        <h2>Supporting Children Through Education</h2>
+
+        <p>
+          All God's Children Foundation works with children and families in
+          Kamengo, Mpigi District, Uganda, to help address barriers to education.
+          Through our School Supplies Drive, we mobilise essential scholastic
+          materials that help children prepare for school and take part in
+          classroom learning.
+        </p>
+
+        <p>
+          By working with community members and supporters, we aim to make
+          learning materials more accessible to children who need them.
+        </p>
+
+      </div>
+
+      <!-- SCHOOL SUPPLIES PHOTOS -->
+      <div class="supplies-gallery">
+
+        <figure class="supplies-photo">
+          <img
+            src="images/school-supplies-preparation-01.jpg"
+            alt="School supplies being prepared for children"
+            loading="lazy"
+          >
+
+          <figcaption>Preparing School Supplies</figcaption>
+        </figure>
+
+        <figure class="supplies-photo">
+          <img
+            src="images/school-supplies-packing-02.jpg"
+            alt="Scholastic materials being packed for distribution"
+            loading="lazy"
+          >
+
+          <figcaption>Packing Learning Materials</figcaption>
+        </figure>
+
+        <figure class="supplies-photo">
+          <img
+            src="images/school-supplies-distribution-03.jpg"
+            alt="School supplies being distributed to children"
+            loading="lazy"
+          >
+
+          <figcaption>Sharing Essential Supplies</figcaption>
+        </figure>
+
+        <figure class="supplies-photo">
+          <img
+            src="images/school-supplies-materials-04.png"
+            alt="Essential scholastic materials for schoolchildren"
+            loading="lazy"
+          >
+
+          <figcaption>Materials for Learning</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- PROGRAMME DETAILS -->
+    <section class="supplies-section">
+      <div class="supplies-details">
+
+        <h2>What the Drive Supports</h2>
+
+        <p>
+          Depending on available resources and children's needs, the drive
+          may support access to exercise books, pens, pencils and other
+          essential scholastic materials.
+        </p>
+
+        <h2>Our Community Approach</h2>
+
+        <p>
+          We believe that supporting education is a shared responsibility.
+          We work to connect community needs with the generosity of people
+          who want children to have better opportunities to learn.
+        </p>
+
+        <h2>Our Goal</h2>
+
+        <p>
+          Our goal is to help children begin and continue their learning
+          with essential materials, while encouraging families and communities
+          to value and support every child's education.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="supplies-cta">
+      <h2>Help a Child Be Ready to Learn</h2>
+
+      <p>
+        Your support can help provide essential school materials and give
+        children more opportunities to participate in education.
+      </p>
+
+      <a class="supplies-button" href="donate.html">
+        Support Our Work
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <p><strong>All God's Children Foundation</strong></p>
+
+      <p>Every Child, Every Chance</p>
+
+      <p>Kamengo Sub-county, Mpigi District, Central Region, Uganda</p>
+
+      <p>
+        <a href="mailto:allgodschildrenfoundation@gmail.com">
+          allgodschildrenfoundation@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <a href="tel:+256701973542">+256 701 973 542</a>
+      </p>
+
+      <p>Registration is currently in progress in Uganda.</p>
+
+      <p>
+        &copy; <span id="current-year">2026</span>
+        All God's Children Foundation. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Shared website navigation -->
+
+  
+
+
+<script src="script.js"></script>
+</body>
+</html>

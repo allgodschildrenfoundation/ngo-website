@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12366b">
+
+  <title>Water Safety Campaign | All God's Children Foundation</title>
+
+  <meta
+    name="description"
+    content="All God's Children Foundation promotes water safety awareness and drowning prevention among school children in Kamengo, Mpigi District, Uganda."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
+    }
+
+    body {
+      margin: 0;
+      width: 100%;
+      overflow-x: clip;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* Navigation: aligned with index.html */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+    }
+
+    .nav-wrap {
+      width: 100%;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .nav-links {
+      min-width: 0;
+      flex: 0 1 auto;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      overflow: visible;
+    }
+
+    .nav-item {
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .nav-item > .nav-menu-toggle {
+      white-space: nowrap;
+    }
+
+    .nav-item > .nav-menu-toggle.donate-link {
+      background: #237a4b;
+      color: #fff;
+    }
+
+    .nav-item > .nav-menu-toggle.donate-link:hover,
+    .nav-item > .nav-menu-toggle.donate-link[aria-expanded="true"] {
+      background: #185d38;
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      z-index: 3000;
+    }
+
+    @media (min-width: 981px) and (max-width: 1250px) {
+      .nav-wrap {
+        gap: 0.5rem;
+        padding-inline: 0.75rem;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        max-width: 155px;
+        font-size: 0.82rem;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-item > .nav-menu-toggle {
+        padding: 0.65rem 0.4rem;
+        font-size: 0.77rem;
+        gap: 0.2rem;
+      }
+
+      .nav-item > .nav-menu-toggle.donate-link {
+        padding: 0.65rem 0.45rem;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-item {
+        width: 100%;
+      }
+
+      .nav-item > .nav-menu-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .nav-item > .dropdown-menu {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin-top: 0;
+        box-shadow: none;
+      }
+    }
+
+    /* Water safety hero */
+    .water-hero {
+      background: #12366b;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .water-hero-inner {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .water-hero h1 {
+      margin: 0 0 15px;
+      font-size: 2.4rem;
+      line-height: 1.25;
+      color: #fff;
+    }
+
+    .water-hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #fff;
+    }
+
+    .water-slogan {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    /* Main content sections */
+    .water-section {
+      padding: 45px 20px;
+    }
+
+    .water-intro {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .water-intro h2,
+    .water-details h2 {
+      color: #12366b;
+      line-height: 1.4;
+    }
+
+    .water-banner {
+      max-width: 1050px;
+      margin: 35px auto 0;
+      text-align: center;
+    }
+
+    .water-banner img {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+
+    .water-details {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #303b49;
+    }
+
+    .water-details h2 {
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .water-details h2:first-child {
+      margin-top: 0;
+    }
+
+    .water-details ul {
+      padding-left: 24px;
+    }
+
+    .water-details li {
+      margin-bottom: 8px;
+    }
+
+    /* Call to action */
+    .water-cta {
+      background: #f3f6fa;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .water-cta h2 {
+      color: #12366b;
+      margin: 0 0 12px;
+    }
+
+    .water-cta p {
+      max-width: 750px;
+      margin: 12px auto 22px;
+      line-height: 1.8;
+      color: #303b49;
+    }
+
+    .water-button {
+      display: inline-block;
+      background: #12366b;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .water-button:hover,
+    .water-button:focus-visible {
+      background: #0b2852;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 650px) {
+      .water-hero {
+        padding: 42px 18px;
+      }
+
+      .water-hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .water-section {
+        padding: 32px 18px;
+      }
+
+      .water-banner {
+        margin-top: 25px;
+      }
+
+      .water-cta {
+        padding: 35px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- MAIN NAVIGATION: MATCHES index.html -->
+  <header class="site-header">
+  <div class="nav-wrap">
+
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
+
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
+
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="water-hero">
+      <div class="water-hero-inner">
+        <h1>Water Safety Campaign</h1>
+
+        <p>
+          <span class="water-slogan">
+            Water Safety Saves Lives — Be Safe, Be Aware.
+          </span>
+
+          Promoting water safety awareness and drowning prevention
+          among school children.
+        </p>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION AND BANNER -->
+    <section class="water-section">
+      <div class="water-intro">
+        <h2>Protecting Children Through Water Safety Awareness</h2>
+
+        <p>
+          All God's Children Foundation is developing a water safety campaign
+          to help children recognise water-related dangers and learn practical
+          ways to stay safe around ponds, rivers, lakes, wells, dams and other
+          water environments.
+        </p>
+
+        <p>
+          Our pilot campaign focuses on five primary schools in Kamengo,
+          Mpigi District, Uganda, with the long-term aim of expanding
+          water safety awareness to more communities.
+        </p>
+      </div>
+
+      <div class="water-banner">
+        <img
+          src="images/water-safety-banner.png"
+          alt="All God's Children Foundation water safety campaign banner"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+    <!-- CAMPAIGN DETAILS -->
+    <section class="water-section">
+      <div class="water-details">
+
+        <h2>What the Campaign Teaches</h2>
+
+        <ul>
+          <li>Recognising dangerous situations around water.</li>
+          <li>Keeping a safe distance from unfamiliar or unsafe water areas.</li>
+          <li>Never entering the water to rescue someone without appropriate training.</li>
+          <li>Calling for adult help and alerting emergency responders when someone is in danger.</li>
+          <li>Understanding basic water safety rules at home, school and in the community.</li>
+        </ul>
+
+        <h2>How We Plan to Reach Children</h2>
+
+        <p>
+          The pilot is designed around school awareness sessions, practical
+          demonstrations, educational games and role-play, posters and safety
+          messages, and engagement with teachers and volunteers.
+        </p>
+
+        <p>
+          Where resources allow, the campaign will also support schools with
+          suitable safety materials and equipment to reinforce the lessons.
+        </p>
+
+        <h2>Our Pilot Location</h2>
+
+        <p>
+          The initial campaign is planned for five primary schools in Kamengo,
+          Mpigi District, Uganda. Lessons learned from the pilot will help
+          guide future improvements and possible expansion.
+        </p>
+
+        <h2>Why Water Safety Matters</h2>
+
+        <p>
+          Children may encounter water hazards while travelling, playing or
+          helping with everyday activities. Age-appropriate water safety
+          education can help them recognise danger, make safer decisions
+          and know when to seek help.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="water-cta">
+      <h2>Help Us Promote Water Safety</h2>
+
+      <p>
+        We welcome collaboration with schools, churches, community groups
+        and supporters who share our commitment to protecting children
+        and promoting water safety awareness.
+      </p>
+
+      <a class="water-button" href="contact.html">
+        Contact Us
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <p><strong>All God's Children Foundation</strong></p>
+
+      <p>Every Child, Every Chance</p>
+
+      <p>Kamengo Sub-county, Mpigi District, Central Region, Uganda</p>
+
+      <p>
+        <a href="mailto:allgodschildrenfoundation@gmail.com">
+          allgodschildrenfoundation@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <a href="tel:+256701973542">+256 701 973 542</a>
+      </p>
+
+      <p>
+        Registration is currently in progress in Uganda.
+      </p>
+
+      <p>
+        &copy; <span id="current-year">2026</span>
+        All God's Children Foundation. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Shared website navigation script -->
+
+  
+
+
+<script src="script.js"></script>
+</body>
+</html>

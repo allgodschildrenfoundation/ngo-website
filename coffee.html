@@ -1,206 +1,778 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee for Education | All God's Children Foundation</title>
+  <meta name="description" content="Explore how coffee growers, cafés, businesses, churches and individuals can connect coffee with children's education through All God's Children Foundation.">
 
-<title>Coffee for Education | All God’s Children Foundation</title>
+  <link rel="stylesheet" href="styles.css">
 
-<script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .coffee-page {
+      background: #fff;
+      color: #243247;
+    }
+
+    .coffee-page p,
+    .coffee-page li,
+    .coffee-page .card p,
+    .coffee-page .blue-panel p,
+    .coffee-page .coffee-intro p,
+    .coffee-page .coffee-cta p {
+      color: #243247 !important;
+      opacity: 1 !important;
+      line-height: 1.75;
+    }
+
+    .coffee-page h1,
+    .coffee-page h2,
+    .coffee-page h3 {
+      color: #12366b;
+    }
+
+    /* Video hero background */
+    .coffee-page .coffee-video-hero {
+      position: relative;
+      min-height: 490px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: #12366b;
+      padding: 70px 20px;
+      box-sizing: border-box;
+    }
+
+    .coffee-page .coffee-video-hero video {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .coffee-page .coffee-video-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        90deg,
+        rgba(7, 23, 45, 0.78),
+        rgba(7, 23, 45, 0.52)
+      );
+    }
+
+    .coffee-page .coffee-hero-content {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .coffee-page .coffee-eyebrow {
+      color: #ffe08a !important;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .coffee-page .coffee-video-hero h1 {
+      color: #fff !important;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+
+    .coffee-page .coffee-video-hero p {
+      color: #fff !important;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .coffee-page .section {
+      padding-top: 52px;
+      padding-bottom: 52px;
+    }
+
+    .coffee-page .coffee-intro {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .coffee-page .coffee-intro p {
+      font-size: 1.05rem;
+    }
+
+    .coffee-page .coffee-image {
+      display: block;
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .coffee-page .card {
+      height: 100%;
+      box-sizing: border-box;
+      background: #fff;
+      border: 1px solid #e0e7ef;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(18, 54, 107, 0.06);
+    }
+
+    .coffee-page .card-body {
+      padding: 24px;
+    }
+
+    .coffee-page .card h3 {
+      margin-top: 0;
+    }
+
+    .coffee-page .notice {
+      background: #f2f7fc;
+      border-left: 4px solid #237a4b;
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .coffee-page .blue-panel {
+      background: #edf4fb;
+      border: 1px solid #d7e5f4;
+      border-radius: 14px;
+      padding: 32px;
+    }
+
+    .coffee-page .section-heading {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 30px;
+    }
+
+    .coffee-page .section-heading p {
+      margin-bottom: 12px;
+    }
+
+    .coffee-page .coffee-cta {
+      background: #f5f8fc;
+      border: 1px solid #e0e7ef;
+      border-radius: 14px;
+      padding: 34px;
+      text-align: center;
+    }
+
+    .coffee-page .coffee-cta h2 {
+      color: #12366b !important;
+    }
+
+    .coffee-page .coffee-cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .coffee-page a.coffee-button,
+    .coffee-page a.coffee-button:link,
+    .coffee-page a.coffee-button:visited {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 13px 22px;
+      border: 2px solid #237a4b !important;
+      border-radius: 7px;
+      background: #237a4b !important;
+      color: #fff !important;
+      -webkit-text-fill-color: #fff !important;
+      text-decoration: none !important;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .coffee-page a.coffee-button:hover {
+      background: #185b37 !important;
+      border-color: #185b37 !important;
+      color: #fff !important;
+      -webkit-text-fill-color: #fff !important;
+    }
+
+    .coffee-page a.coffee-button-outline,
+    .coffee-page a.coffee-button-outline:link,
+    .coffee-page a.coffee-button-outline:visited {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 13px 22px;
+      border: 2px solid #12366b !important;
+      border-radius: 7px;
+      background: #fff !important;
+      color: #12366b !important;
+      -webkit-text-fill-color: #12366b !important;
+      text-decoration: none !important;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .coffee-page a.coffee-button-outline:hover {
+      background: #12366b !important;
+      color: #fff !important;
+      -webkit-text-fill-color: #fff !important;
+    }
+
+    .coffee-page .coffee-list {
+      padding-left: 22px;
+    }
+
+    .coffee-page .coffee-list li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .coffee-page .coffee-video-hero {
+        min-height: 420px;
+        padding: 55px 20px;
+      }
+
+      .coffee-page .blue-panel,
+      .coffee-page .coffee-cta {
+        padding: 22px;
+      }
+
+      .coffee-page .coffee-cta-buttons {
+        flex-direction: column;
+      }
+
+      .coffee-page a.coffee-button,
+      .coffee-page a.coffee-button-outline {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .coffee-page .coffee-video-hero video {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="coffee-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- NAVIGATION (MASTER GLOBAL BAR) -->
-<nav class="bg-blue-700 text-white px-6 py-4 shadow-md">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
+  <!-- Header and navigation -->
+  <header class="site-header">
+  <div class="nav-wrap">
 
-    <div class="flex items-center gap-2">
-      <img src="images/logo.png" class="h-10">
-      <span class="text-xl font-bold">
-        All God’s Children Foundation
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
       </span>
-    </div>
+    </a>
 
-    <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
 
-    <div id="menu" class="hidden md:flex gap-6 font-semibold absolute md:static top-16 left-0 w-full md:w-auto bg-blue-700 md:bg-transparent p-6 md:p-0 flex-col md:flex-row">
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
 
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="about.html" class="hover:text-yellow-300">About</a>
-      <a href="programs.html" class="hover:text-yellow-300">Programs</a>
-      <a href="coffee.html" class="text-yellow-300">Coffee</a>
-      <a href="gallery.html" class="hover:text-yellow-300">Gallery</a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-
-      <a href="donate.html" class="bg-white text-blue-700 px-4 py-2 rounded-xl font-bold hover:bg-yellow-300">
-        Donate
-      </a>
-
-    </div>
-  </div>
-</nav>
-
-<script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
-
-<!-- HERO VIDEO -->
-<section class="relative h-screen overflow-hidden">
-
-  <video autoplay muted loop playsinline
-    class="absolute inset-0 w-full h-full object-cover">
-
-    <source src="images/image9.mp4" type="video/mp4">
-
-  </video>
-
-  <div class="absolute inset-0 bg-black/60"></div>
-
-  <div class="relative z-10 max-w-6xl mx-auto px-8 h-full flex items-center">
-
-    <div class="text-white max-w-3xl">
-
-      <p class="uppercase tracking-[6px] text-yellow-300 mb-4">
-        SUSTAINABILITY INITIATIVE
-      </p>
-
-      <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-        Coffee for Education
-      </h1>
-
-      <p class="mt-8 text-xl leading-9">
-        Many people see a coffee plantation.<br><br>
-        We see school fees.<br>
-        We see opportunity.<br>
-        We see hope.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- WHY COFFEE -->
-<section class="bg-white">
-  <div class="max-w-6xl mx-auto py-20 px-8 grid md:grid-cols-2 gap-16">
-
-    <div>
-      <h2 class="text-4xl font-bold text-blue-700">Why Coffee?</h2>
-
-      <p class="mt-8 text-lg leading-9">
-        At All God’s Children Foundation, we believe that lasting change requires sustainable solutions.
-        Coffee farming is more than agriculture — it is opportunity.
-        <br><br>
-        It helps us generate long-term funding to support vulnerable children in education.
-      </p>
-    </div>
-
-    <img src="images/image8.jpg" class="rounded-3xl shadow-xl">
-
-  </div>
-</section>
-
-<!-- IMPACT MODEL -->
-<section class="bg-blue-700 py-20">
-  <div class="max-w-5xl mx-auto px-8">
-
-    <div class="bg-white rounded-3xl p-10 shadow-2xl">
-
-      <h2 class="text-4xl font-bold text-blue-700">
-        25% Directly Supports Education
-      </h2>
-
-      <p class="mt-6 text-lg leading-9">
-        A portion of coffee initiative income is committed to:
-        <br><br>
-        ✔ School fees support<br>
-        ✔ Learning materials<br>
-        ✔ Vulnerable family assistance
-        <br><br>
-        This ensures long-term sustainability for our mission.
-      </p>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- IMPACT FLOW -->
-<section class="py-24 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-8">
-
-    <h2 class="text-center text-4xl font-bold text-blue-700">
-      From Coffee to Opportunity
-    </h2>
-
-    <div class="grid md:grid-cols-4 gap-6 mt-16">
-
-      <div class="bg-white p-8 rounded-3xl shadow text-center">
-        <div class="text-5xl">☕</div>
-        <h3 class="mt-4 font-bold">Coffee Farming</h3>
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow text-center">
-        <div class="text-5xl">💰</div>
-        <h3 class="mt-4 font-bold">Sustainable Income</h3>
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow text-center">
-        <div class="text-5xl">📚</div>
-        <h3 class="mt-4 font-bold">Education Support</h3>
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow text-center">
-        <div class="text-5xl">🌍</div>
-        <h3 class="mt-4 font-bold">Community Growth</h3>
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+
+    <!-- Hero section: existing video is the background -->
+    <section class="coffee-video-hero">
+
+      <video autoplay muted loop playsinline preload="metadata"
+             poster="images/image8.jpg"
+             aria-hidden="true">
+        <source src="images/image9.mp4" type="video/mp4">
+      </video>
+
+      <div class="coffee-video-overlay"></div>
+
+      <div class="coffee-hero-content">
+        <p class="coffee-eyebrow">EVERY CHILD, EVERY CHANCE</p>
+        <h1>Coffee for Education</h1>
+        <p>
+          Exploring how coffee growers, cafés, businesses, churches,
+          organisations and individuals can connect their work and generosity
+          with children's education.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Introduction -->
+    <section class="section">
+      <div class="container">
+
+        <div class="coffee-intro">
+          <h2>Every Child, Every Chance</h2>
+
+          <p>
+            We believe that every child deserves an opportunity to learn, grow
+            and build a brighter future. Through All God's Children Foundation,
+            we work to support children and families in our community, including
+            through education support and essential school supplies.
+          </p>
+
+          <p>
+            We welcome conversations with coffee growers, roasters, cafés,
+            businesses, churches and individuals who share this vision. Together,
+            we can explore ideas that connect coffee with opportunities for
+            children to access education.
+          </p>
+        </div>
+
+        <div class="grid grid-2 mt-3" style="align-items:center; gap:28px;">
+
+          <div>
+            <img
+              class="coffee-image"
+              src="images/image12345.jpeg"
+              alt="Coffee growing and the possibility of connecting coffee with education"
+              onerror="this.onerror=null;this.src='images/image8.jpg';"
+            >
+          </div>
+
+          <div>
+            <h2>Connecting Coffee with Children's Futures</h2>
+
+            <p>
+              Coffee brings people, communities and businesses together. We
+              would like to explore whether these connections can also help
+              create educational opportunities for children who need support.
+            </p>
+
+            <p>
+              We are open to practical ideas, conversations and partnerships
+              that reflect the interests and capacity of everyone involved.
+            </p>
+
+            <a class="coffee-button" href="#explore">
+              Explore the Possibilities
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore the possibilities -->
+    <section class="section" id="explore" style="background:#f5f8fc;">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Let's Explore the Possibilities Together</h2>
+
+          <p>
+            Are you a coffee grower, café owner, business, church, organisation
+            or individual interested in connecting coffee with children's
+            education? We would welcome the opportunity to hear your ideas.
+          </p>
+
+          <p>
+            Tell us about your organisation, your idea and how you would like
+            to explore working together.
+          </p>
+        </div>
+
+        <div class="grid grid-3" style="gap:22px;">
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Coffee Growers and Producers</h3>
+              <p>
+                If you grow or produce coffee, let's discuss ideas for
+                connecting your work with children's educational opportunities.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Cafés and Roasters</h3>
+              <p>
+                If you run a café or roast coffee, we would be glad to hear
+                your ideas for raising awareness or exploring a coffee-related
+                initiative that supports education.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Businesses and Organisations</h3>
+              <p>
+                Businesses and organisations can share ideas, explore suitable
+                partnerships and discuss ways to contribute to children's learning.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Churches and Faith Communities</h3>
+              <p>
+                Churches and faith communities can help spread the vision,
+                connect us with potential partners and explore ways to encourage
+                support for children's education.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Individuals and Friends</h3>
+              <p>
+                You do not need to own a business to get involved. Share an
+                idea, introduce us to someone or help others learn about our work.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>International Partners</h3>
+              <p>
+                We welcome conversations with people and organisations in
+                Uganda and internationally who are interested in education,
+                community development and collaborative ideas.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why education matters -->
+    <section class="section">
+      <div class="container">
+
+        <div class="grid grid-2" style="gap:28px; align-items:start;">
+
+          <div>
+            <h2>Why Education Matters</h2>
+
+            <p>
+              A child's education can open doors to knowledge, confidence and
+              future opportunities. Yet some children face barriers such as
+              school fees, uniforms, scholastic materials and other essential needs.
+            </p>
+
+            <p>
+              All God's Children Foundation works with children and families
+              in the Kamengo community in Mpigi District, Uganda. Our education
+              work aims to help children access learning opportunities and
+              encourage them to keep working towards their futures.
+            </p>
+          </div>
+
+          <div class="notice">
+            <h3>Our Shared Vision</h3>
+
+            <p>
+              We want to build connections between people who care about
+              coffee, community and education, and explore practical ways to
+              help children learn and thrive.
+            </p>
+
+            <p>
+              Each potential collaboration can be discussed individually so
+              that expectations, responsibilities and the intended use of any
+              support are clear.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaboration steps -->
+    <section class="section" style="background:#f5f8fc;">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Start with a Conversation</h2>
+          <p>
+            We are at the stage of exploring ideas and welcoming conversations.
+            No particular coffee product or partnership arrangement is assumed.
+          </p>
+        </div>
+
+        <div class="grid grid-3" style="gap:22px;">
+
+          <article class="card">
+            <div class="card-body">
+              <h3>1. Share Your Idea</h3>
+              <p>
+                Tell us about your work, your interests and the kind of
+                connection you have in mind.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>2. Explore What Is Practical</h3>
+              <p>
+                We can discuss possible approaches, resources, responsibilities
+                and whether the idea fits our education mission.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>3. Agree on Next Steps</h3>
+              <p>
+                If there is a suitable opportunity, we can discuss the details
+                and agree on clear next steps together.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparency -->
+    <section class="section">
+      <div class="container">
+
+        <div class="blue-panel">
+          <h2>Built on Trust and a Shared Purpose</h2>
+
+          <p>
+            We value honest communication, responsible collaboration and the
+            wellbeing of the children and families we serve. Any proposed
+            initiative will need to be discussed clearly, including its purpose,
+            commitments and how it could contribute to educational opportunities.
+          </p>
+
+          <p>
+            All God's Children Foundation's registration is currently in
+            progress in Uganda. We aim to communicate openly about our status
+            and the arrangements for any potential collaboration.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact call to action -->
+    <section class="section">
+      <div class="container">
+
+        <div class="coffee-cta">
+          <h2>Have an Idea? We Would Love to Hear from You.</h2>
+
+          <p>
+            Whether you are a coffee grower, café owner, business, church,
+            organisation or individual, your ideas and introductions are welcome.
+          </p>
+
+          <p>
+            Contact us to introduce yourself and tell us how you would like
+            to explore connecting coffee with children's education.
+          </p>
+
+          <div class="coffee-cta-buttons">
+
+            <a
+              class="coffee-button"
+              href="mailto:allgodschildrenfoundation@gmail.com?subject=Coffee%20for%20Education%20Inquiry"
+            >Email AGCF</a>
+
+            <a
+              class="coffee-button-outline"
+              href="https://wa.me/256701973542?text=Hello%20AGCF%2C%20I%20would%20like%20to%20discuss%20the%20Coffee%20for%20Education%20initiative."
+              target="_blank"
+              rel="noopener noreferrer"
+            >Contact via WhatsApp</a>
+
+            <a
+              class="coffee-button-outline"
+              href="support-a-child.html"
+            >Learn About Supporting a Child</a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Child safeguarding -->
+    <section class="section" style="background:#f5f8fc;">
+      <div class="container center">
+        <h2>Children's Wellbeing Comes First</h2>
+
+        <p style="max-width:800px; margin:0 auto;">
+          We are committed to treating children with dignity and respect and
+          protecting their privacy. Our work places children's safety, wellbeing
+          and educational opportunities at the centre of our mission.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <h3>All God's Children Foundation</h3>
+          <p>Every Child, Every Chance.</p>
+          <p>
+            Community-rooted work supporting children through education,
+            family support, mentorship and child-focused initiatives.
+          </p>
+          <p>Kamengo Sub-county, Mpigi District, Uganda</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="what-we-do.html">Our Programmes</a>
+            <a href="get-involved.html">Get Involved</a>
+            <a href="news.html">News &amp; Updates</a>
+            <a href="gallery.html">Gallery</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Support and Contact</h3>
+          <div class="footer-links">
+            <a href="donate.html">Donate to AGCF</a>
+            <a href="coffee.html" aria-current="page">Coffee for Education</a>
+            <a href="support-a-child.html">Support a Child</a>
+            <a href="partner-with-us.html">Partner With Us</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+
+          <p>
+            <a href="mailto:allgodschildrenfoundation@gmail.com">
+              allgodschildrenfoundation@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <a href="https://wa.me/256701973542"
+               target="_blank"
+               rel="noopener noreferrer">
+              WhatsApp: +256 701 973 542
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year">2026</span>
+          All God's Children Foundation. Every Child, Every Chance.
+        </p>
       </div>
 
     </div>
+  </footer>
 
-  </div>
-</section>
+  
 
-<!-- QUOTE -->
-<section class="bg-gray-900 text-white py-24 text-center">
-  <div class="max-w-4xl mx-auto px-8">
 
-    <p class="text-3xl italic leading-relaxed">
-      “Every coffee tree planted is a step toward education for a child.”
-    </p>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="text-center py-20">
-
-  <h2 class="text-4xl font-bold text-blue-700">
-    Support Sustainable Change
-  </h2>
-
-  <p class="mt-5 text-lg">
-    Your support helps us turn agriculture into education opportunity.
-  </p>
-
-  <a href="donate.html"
-     class="inline-block mt-8 bg-blue-700 text-white px-10 py-4 rounded-2xl hover:bg-blue-800">
-    Donate Now
-  </a>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="py-10 text-center text-gray-500">
-  © 2026 All God’s Children Foundation
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
+```

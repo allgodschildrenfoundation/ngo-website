@@ -1,208 +1,490 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All God’s Children Foundation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="All God's Children Foundation supports children's education, water safety, safe water access, and community wellbeing in Uganda.">
+  <title>All God's Children Foundation | Every Child, Every Chance</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
-<body class="bg-gray-50 text-gray-800">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- NAVIGATION (MASTER FIXED) -->
-<nav class="bg-blue-700 text-white px-6 py-4 shadow-md">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
+<!-- HEADER AND FIVE MAIN NAVIGATION TABS -->
+<header class="site-header">
+  <div class="nav-wrap">
 
-    <!-- LOGO -->
-    <div class="flex items-center gap-3">
-      <img src="images/logo.png" class="h-10" alt="Logo">
-
-      <span class="text-xl font-bold whitespace-nowrap">
-        All God&#39;s Children Foundation
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
       </span>
-    </div>
+    </a>
 
-    <!-- DESKTOP MENU -->
-    <div class="hidden md:flex gap-5 font-semibold flex-wrap items-center">
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
 
-      <a href="index.html" class="text-yellow-300 whitespace-nowrap">Home</a>
-      <a href="about.html" class="hover:text-yellow-300 whitespace-nowrap">About</a>
-      <a href="programs.html" class="hover:text-yellow-300 whitespace-nowrap">Programs</a>
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
 
-      <a href="coffee.html" class="hover:text-yellow-300 whitespace-nowrap">
-        Coffee for Education
-      </a>
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
 
-      <a href="gallery.html" class="hover:text-yellow-300 whitespace-nowrap">Gallery</a>
-      <a href="contact.html" class="hover:text-yellow-300 whitespace-nowrap">Contact</a>
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
 
-      <a href="donate.html"
-         class="bg-white text-blue-700 px-4 py-2 rounded-xl font-bold hover:bg-yellow-300 whitespace-nowrap">
-        Donate
-      </a>
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
 
-    </div>
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
 
-    <!-- MOBILE BUTTON -->
-    <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
 
+    </nav>
   </div>
-
-  <!-- MOBILE MENU -->
-  <div id="menu" class="hidden md:hidden flex flex-col gap-4 px-6 pb-4">
-
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="coffee.html">Coffee for Education</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a href="donate.html">Donate</a>
-
-  </div>
-</nav>
-
-<script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
-
-<!-- HERO SECTION -->
-<header class="bg-white text-center py-24 px-6">
-
-  <h1 class="text-5xl font-bold text-blue-700 leading-tight">
-    Every Child Deserves Education, Opportunity & Hope
-  </h1>
-
-  <p class="mt-6 text-lg max-w-3xl mx-auto text-gray-600 leading-8">
-    All God’s Children Foundation is a Uganda-based NGO supporting vulnerable children
-    through education, school support, mentorship, and sustainable community initiatives
-    that help break the cycle of poverty.
-  </p>
-
-  <a href="#donate"
-     class="inline-block mt-8 bg-blue-700 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-800">
-    Support a Child Today
-  </a>
-
 </header>
 
-<!-- IMPACT -->
-<section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6 mt-10">
+<main id="main-content">
 
-  <div class="bg-white rounded-2xl shadow p-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-700">10+</h2>
-    <p class="mt-2 text-gray-600">Children Supported</p>
-  </div>
+  <!-- HOMEPAGE HERO -->
+  <section class="hero">
+    <img src="images/image1.jpg"
+         alt="Community members and children involved in foundation activities"
+         fetchpriority="high">
 
-  <div class="bg-white rounded-2xl shadow p-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-700">4</h2>
-    <p class="mt-2 text-gray-600">Active Programs</p>
-  </div>
+    <div class="hero-content">
+      <span class="eyebrow">Every Child, Every Chance</span>
 
-  <div class="bg-white rounded-2xl shadow p-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-700">1</h2>
-    <p class="mt-2 text-gray-600">Community Vision</p>
-  </div>
+      <h1>Helping Children Learn, Grow and Thrive</h1>
 
-</section>
+      <p>
+        All God's Children Foundation works with communities in Uganda
+        to support children's education, promote water safety, improve
+        access to safe water, and strengthen family and community wellbeing.
+      </p>
 
-<!-- WHY WE EXIST -->
-<section class="max-w-5xl mx-auto bg-white p-8 mt-10 rounded-2xl shadow">
+      <div class="hero-actions">
+        <a class="button button-gold" href="what-we-do.html">
+          Explore Our Programmes
+        </a>
+        <a class="button button-outline" href="get-involved.html">
+          Get Involved
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <h2 class="text-3xl font-bold text-blue-700">Why We Exist</h2>
+  <!-- IMPACT INTRODUCTION -->
+  <section class="section section-tight">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Our Commitment</span>
+        <h2>Every Child Deserves a Chance</h2>
+        <p>
+          We work alongside families and communities to help children
+          access opportunities to learn, stay safe and build a brighter future.
+        </p>
+      </div>
 
-  <p class="mt-6 leading-8 text-gray-700">
-    Many children in our communities are bright and full of potential but are unable to attend school
-    due to financial hardship.
-    <br><br>
-    We exist to ensure that lack of school fees, uniforms, or materials does not determine a child’s future.
-    Our mission is to restore opportunity through education support and long-term empowerment.
-  </p>
+      <div class="stats">
+        <div class="stat">
+          <strong>Education</strong>
+          <span>Supporting children's learning and school participation</span>
+        </div>
 
-</section>
+        <div class="stat">
+          <strong>Safety</strong>
+          <span>Promoting water-safety awareness and drowning prevention</span>
+        </div>
 
-<!-- JOSH STORY -->
-<section class="max-w-5xl mx-auto bg-white p-8 mt-8 rounded-2xl shadow text-center">
+        <div class="stat">
+          <strong>Community</strong>
+          <span>Working with families to strengthen children's wellbeing</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2 class="text-3xl font-bold text-blue-700">Real Stories, Real Impact</h2>
+  <!-- ABOUT AGCF -->
+  <section class="section">
+    <div class="container split">
+      <div>
+        <img src="images/image8.jpg"
+             alt="Community outreach and engagement">
 
-  <p class="mt-4 text-gray-600">
-    Meet Josh — a child whose story reflects many others we support across Uganda.
-  </p>
+      </div>
 
-  <a href="meet-josh.html"
-     class="inline-block mt-6 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold">
-    Read His Story
-  </a>
+      <div>
+        <span class="eyebrow">Who We Are</span>
+        <h2>Working Together for Children and Communities</h2>
 
-</section>
+        <p>
+          All God's Children Foundation (AGCF) is a community-focused
+          foundation established in 2024. Our work is rooted in the belief
+          that children deserve opportunities to learn, develop and live safely.
+        </p>
 
-<!-- PROGRAMS -->
-<section class="max-w-5xl mx-auto bg-white p-8 mt-8 rounded-2xl shadow">
+        <p>
+          Based in Kamengo Sub-county, Mpigi District, Uganda, we work with
+          families, volunteers, schools and community members to respond
+          to local needs and support children's wellbeing.
+        </p>
 
-  <h2 class="text-3xl font-bold text-blue-700">Our Programs</h2>
+        <ul class="check-list">
+          <li>Education and school supplies support</li>
+          <li>Water-safety awareness and drowning prevention</li>
+          <li>Safe water access initiatives</li>
+          <li>Family support, mentorship and community engagement</li>
+        </ul>
 
-  <ul class="mt-6 space-y-2 text-gray-700 list-disc pl-6">
-    <li>Back-to-School Support</li>
-    <li>School Supplies Distribution</li>
-    <li>After-School Tutoring</li>
-    <li>Life Skills & Mentorship</li>
-  </ul>
+        <p class="muted">
+          The foundation's registration is currently in progress in Uganda.
+        </p>
 
-</section>
+        <a class="button button-green" href="about.html">Learn About AGCF</a>
+      </div>
+    </div>
+  </section>
 
-<!-- COFFEE INITIATIVE -->
-<section class="max-w-5xl mx-auto bg-white p-8 mt-8 rounded-2xl shadow">
+  <!-- OUR PROGRAMMES -->
+  <section class="section" style="background:#f0f5f2;">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">What We Do</span>
+        <h2>Our Programmes</h2>
+        <p>
+          Explore each programme to learn about its purpose and how
+          it supports children, families and communities.
+        </p>
+      </div>
 
-  <h2 class="text-3xl font-bold text-blue-700">
-    Coffee for Education Initiative
-  </h2>
+      <div class="grid grid-3">
 
-  <p class="mt-6 leading-8 text-gray-700">
-    Alongside education programs, we are building sustainable initiatives such as coffee farming.
-    A portion of income from this initiative is directed toward supporting children’s education
-    and strengthening long-term community development.
-  </p>
+        <article class="card">
+          <img src="images/image5.jpeg"
+               alt="Children and education support activities"
+               loading="lazy">
+          <div class="card-body">
+            <h3>Education Support</h3>
+            <p>
+              Helping children access education through school fees,
+              uniforms, scholastic materials and follow-up support.
+            </p>
+            <a href="education-support.html">Explore Education Support →</a>
+          </div>
+        </article>
 
-  <a href="coffee.html"
-     class="inline-block mt-6 text-blue-700 font-bold">
-    Learn more →
-  </a>
+        <article class="card">
+          <img src="images/image7.png"
+               alt="School supplies and educational support"
+               loading="lazy">
+          <div class="card-body">
+            <h3>School Supplies Drive</h3>
+            <p>
+              Mobilising essential school supplies to help children
+              prepare for learning and participate in school.
+            </p>
+            <a href="school-supplies.html">Explore School Supplies →</a>
+          </div>
+        </article>
 
-</section>
+        <article class="card">
+          <img src="images/water-safety-banner.png"
+               alt="Water safety awareness initiative"
+               loading="lazy"
+               onerror="this.onerror=null;this.src='images/image7.png'">
+          <div class="card-body">
+            <h3>Water Safety Campaign</h3>
+            <p>
+              Promoting water-safety knowledge and drowning prevention
+              among school children and communities.
+            </p>
+            <a href="water-safety.html">Explore Water Safety →</a>
+          </div>
+        </article>
 
-<!-- DONATION -->
-<section id="donate" class="bg-blue-700 text-white text-center py-16 mt-12 px-6">
+        <article class="card">
+          <img src="images/borehole-community-handover-05.jpg"
+               alt="Community safe-water access initiative"
+               loading="lazy">
+          <div class="card-body">
+            <h3>Safe Water Access</h3>
+            <p>
+              Supporting community efforts to improve access to safer
+              water and strengthen awareness of water-related risks.
+            </p>
+            <a href="safe-water-access.html">Explore Safe Water Access →</a>
+          </div>
+        </article>
 
-  <h2 class="text-4xl font-bold">Support a Child Today</h2>
+        <article class="card">
+          <img src="images/image6.png"
+               alt="Family and community support activities"
+               loading="lazy">
+          <div class="card-body">
+            <h3>Family &amp; Community Support</h3>
+            <p>
+              Working with families and local communities to identify
+              needs and support children's wellbeing.
+            </p>
+            <a href="family-community-support.html">Explore Community Support →</a>
+          </div>
+        </article>
 
-  <p class="mt-4 max-w-2xl mx-auto">
-    Your support helps children stay in school, receive learning materials,
-    and build a better future.
-  </p>
+        <article class="card">
+          <img src="images/gallery-mentorship-05.jpg"
+               alt="Children participating in a learning and mentorship activity"
+               loading="lazy">
+          <div class="card-body">
+            <h3>Mentorship &amp; Life Skills</h3>
+            <p>
+              Encouraging children's confidence, positive choices,
+              learning and personal development.
+            </p>
+            <a href="mentorship-life-skills.html">Explore Mentorship →</a>
+          </div>
+        </article>
 
-  <div class="mt-6">
-    <p><b>Mobile Money:</b> +256 701 973542</p>
-    <p><b>Email:</b> allgodschildrenfoundation@gmail.com</p>
-  </div>
+      </div>
 
-  <a href="https://wa.me/256701973542"
-     class="inline-block mt-6 bg-white text-blue-700 px-6 py-3 rounded-xl font-bold">
-    Donate / Contact Us
-  </a>
+      <div class="center mt-3">
+        <a class="button button-green" href="what-we-do.html">
+          View All Programmes
+        </a>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- WATER SAFETY FEATURE -->
+  <section class="section">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Protecting Young Lives</span>
+        <h2>Water Safety Saves Lives</h2>
+
+        <p>
+          Water can present serious risks to children when safety knowledge
+          and supervision are limited. AGCF is preparing a water-safety
+          awareness initiative focused on helping school children recognise
+          hazards and make safer decisions around water.
+        </p>
+
+        <p>
+          The planned pilot is focused on five primary schools in Kamengo,
+          Mpigi District, with activities designed to make water-safety
+          education practical and understandable.
+        </p>
+
+        <a class="button button-green" href="water-safety.html">
+          Learn About the Campaign
+        </a>
+      </div>
+
+      <div>
+        <img src="images/water-safety-banner.png"
+             alt="Water safety campaign awareness"
+             loading="lazy"
+             onerror="this.onerror=null;this.src='images/image7.png'">
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY WORK -->
+  <section class="section section-tight">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Community in Action</span>
+        <h2>Progress Begins When We Work Together</h2>
+        <p>
+          We value the contribution of families, volunteers, educators,
+          community leaders and partners in supporting children.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <img src="images/gallery-community-outreach-01.jpg"
+               alt="Community outreach activity"
+               loading="lazy">
+          <div class="card-body">
+            <h3>Community Outreach</h3>
+            <p>
+              Listening to local needs and working with communities
+              to support children and families.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/gallery-education-support-02.png"
+               alt="Education support activity"
+               loading="lazy">
+          <div class="card-body">
+            <h3>Supporting Learning</h3>
+            <p>
+              Encouraging children to stay engaged in education
+              and helping families address learning-related challenges.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="center mt-3">
+        <a class="button button-green" href="gallery.html">
+          View Our Gallery
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section class="section">
+    <div class="container">
+      <div class="blue-panel center">
+        <span class="eyebrow">Join Us</span>
+        <h2>Help Create More Opportunities for Children</h2>
+        <p>
+          Whether you volunteer your time, share expertise, build a
+          partnership or support a programme, your involvement can
+          contribute to children's wellbeing.
+        </p>
+
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="button button-gold" href="get-involved.html">
+            Get Involved
+          </a>
+          <a class="button button-outline" href="partner-with-us.html">
+            Partner With Us
+          </a>
+          <a class="button button-outline" href="contact.html">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <!-- FOOTER -->
-<footer class="text-center p-6 text-gray-600">
-  © 2026 All God’s Children Foundation | Uganda
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <h2>All God's Children Foundation</h2>
+        <p><strong>Every Child, Every Chance.</strong></p>
+        <p>
+          Supporting children's education, safety and wellbeing
+          in partnership with families and communities in Uganda.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">About AGCF</a></li>
+          <li><a href="what-we-do.html">Our Programmes</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="news.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Us</h3>
+        <p>
+          Kamengo Sub-county,<br>
+          Mpigi District, Uganda
+        </p>
+        <p>
+          Email:
+          <a href="mailto:allgodschildrenfoundation@gmail.com">
+            allgodschildrenfoundation@gmail.com
+          </a>
+        </p>
+        <p>
+          Phone:
+          <a href="tel:+256701973542">+256 701 973542</a>
+        </p>
+        <p><a href="donate.html">Support Our Work</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year">2026</span>
+        All God's Children Foundation. All rights reserved.
+      </p>
+      <p>Registration is currently in progress in Uganda.</p>
+    </div>
+  </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

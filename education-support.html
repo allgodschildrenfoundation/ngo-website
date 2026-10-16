@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Education Support | All God's Children Foundation</title>
+  <meta name="description" content="Discover how All God's Children Foundation supports children's education in Kamengo, Mpigi District, Uganda.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+    }
+
+    .nav-wrap {
+      width: 100%;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .nav-links {
+      min-width: 0;
+      flex: 0 1 auto;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      overflow: visible;
+    }
+
+    .nav-item {
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .nav-item > .nav-menu-toggle {
+      white-space: nowrap;
+    }
+
+    .nav-item > .nav-menu-toggle.donate-link {
+      background: #237a4b;
+      color: #fff;
+    }
+
+    .nav-item > .nav-menu-toggle.donate-link:hover,
+    .nav-item > .nav-menu-toggle.donate-link[aria-expanded="true"] {
+      background: #185d38;
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      z-index: 3000;
+    }
+
+    .education-hero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 440px;
+      padding: 75px 20px;
+      color: #fff;
+      text-align: center;
+      background-color: #12366b;
+      background-image:
+        linear-gradient(
+          rgba(8, 29, 62, 0.76),
+          rgba(8, 29, 62, 0.76)
+        ),
+        url("images/education-school-support-03.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .education-hero .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .education-hero h1 {
+      margin: 0 0 15px;
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+    }
+
+    .education-hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #fff;
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .education-section {
+      padding: 45px 20px;
+    }
+
+    .education-intro {
+      max-width: 850px;
+      margin: 0 auto 35px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .education-intro h2,
+    .education-details h2 {
+      color: #12366b;
+    }
+
+    .education-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 35px auto;
+    }
+
+    .education-photo {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #f5f7fa;
+      border: 1px solid #e5e7eb;
+    }
+
+    .education-photo img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background: #f5f7fa;
+    }
+
+    .education-photo figcaption {
+      padding: 16px;
+    }
+
+    .education-photo h3 {
+      margin: 0 0 8px;
+      color: #12366b;
+      font-size: 1.08rem;
+    }
+
+    .education-photo p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .education-details {
+      max-width: 900px;
+      margin: 40px auto 0;
+      line-height: 1.8;
+    }
+
+    .education-details li {
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .education-cta {
+      max-width: 900px;
+      margin: 40px auto 0;
+      padding: 30px 20px;
+      background: #f5f7fa;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .education-cta h2 {
+      color: #12366b;
+    }
+
+    .education-cta p {
+      line-height: 1.8;
+    }
+
+    .education-cta a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 22px;
+      background: #12366b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .education-cta a:hover {
+      background: #0b2852;
+    }
+
+    @media (min-width: 981px) and (max-width: 1250px) {
+      .nav-wrap {
+        gap: 0.5rem;
+        padding-inline: 0.75rem;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        max-width: 155px;
+        font-size: 0.82rem;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-item > .nav-menu-toggle {
+        padding: 0.65rem 0.4rem;
+        font-size: 0.77rem;
+        gap: 0.2rem;
+      }
+
+      .nav-item > .nav-menu-toggle.donate-link {
+        padding: 0.65rem 0.45rem;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-item {
+        width: 100%;
+      }
+
+      .nav-item > .nav-menu-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .nav-item > .dropdown-menu {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin-top: 0;
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .education-hero {
+        min-height: 350px;
+        padding: 55px 18px;
+      }
+
+      .education-gallery {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .education-photo img {
+        height: 260px;
+      }
+
+      .education-section {
+        padding: 30px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+  <div class="nav-wrap">
+
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
+
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
+
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+
+    <section class="education-hero">
+      <div class="container">
+        <h1>Education Support</h1>
+        <p>
+          Every child deserves the opportunity to learn and build a brighter future.
+        </p>
+      </div>
+    </section>
+
+    <section class="education-section">
+      <div class="container">
+
+        <div class="education-intro">
+          <h2>Creating Opportunities Through Education</h2>
+
+          <p>
+            All God's Children Foundation (AGCF) works with children and
+            families in Kamengo, Mpigi District, Uganda, to help address
+            barriers that can prevent children from accessing education.
+          </p>
+
+          <p>
+            Through educational assistance, family engagement and community
+            support, we aim to help children continue learning with dignity,
+            encouragement and hope.
+          </p>
+        </div>
+
+        <div class="education-gallery">
+
+          <figure class="education-photo">
+            <img
+              src="images/education-classroom-01.jpg"
+              alt="Children learning in a classroom"
+              loading="lazy">
+            <figcaption>
+              <h3>1. Children Learning</h3>
+              <p>
+                Education creates opportunities for children to develop
+                knowledge, confidence and skills for the future.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="education-photo">
+            <img
+              src="images/education-materials-02.jpg"
+              alt="Exercise books, pens, pencils and scholastic materials"
+              loading="lazy">
+            <figcaption>
+              <h3>2. Scholastic Materials</h3>
+              <p>
+                Learning materials help children prepare for lessons
+                and participate in school activities.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="education-photo">
+            <img
+              src="images/image7.png"
+              alt="Education and school support"
+              loading="lazy">
+            <figcaption>
+              <h3>3. School Support</h3>
+              <p>
+                Essential school items can help reduce some of the
+                difficulties families face in supporting children's education.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="education-photo">
+            <img
+              src="images/education-reading-04.jpg"
+              alt="Children reading and working on school exercises"
+              loading="lazy">
+            <figcaption>
+              <h3>4. Reading and Learning</h3>
+              <p>
+                Reading and regular learning activities help children
+                strengthen their understanding and develop a love of learning.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="education-photo">
+            <img
+              src="images/education-support-activity-05.jpg"
+              alt="Education support activity involving children"
+              loading="lazy">
+            <figcaption>
+              <h3>5. Education Support Activities</h3>
+              <p>
+                Working with children and families helps identify
+                educational needs and practical ways to provide support.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="education-photo">
+            <img
+              src="images/education-community-06.jpg"
+              alt="Children and community members connected to education"
+              loading="lazy">
+            <figcaption>
+              <h3>6. Education and Community Impact</h3>
+              <p>
+                Community involvement is important in building an
+                environment where children are encouraged to learn and grow.
+              </p>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <section class="education-details">
+          <h2>How AGCF Supports Education</h2>
+
+          <p>
+            Depending on assessed needs and available resources, our education
+            support may include:
+          </p>
+
+          <ul>
+            <li>School-fee assistance for selected children.</li>
+            <li>Uniforms and essential school items.</li>
+            <li>Exercise books, pens, pencils and other scholastic materials.</li>
+            <li>Educational encouragement, mentorship and follow-up.</li>
+            <li>Engagement with parents and caregivers to understand children's needs.</li>
+          </ul>
+
+          <h2>Our Commitment</h2>
+
+          <p>
+            We believe every child deserves a chance to learn. AGCF seeks to
+            work responsibly with families and communities, using available
+            resources to help children access educational opportunities.
+          </p>
+        </section>
+
+        <section class="education-cta">
+          <h2>Every Child, Every Chance</h2>
+
+          <p>
+            Join us in helping children access the educational support they need.
+          </p>
+
+          <a href="donate.html">Support Our Work</a>
+          <a href="contact.html">Contact AGCF</a>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>All God's Children Foundation</strong></p>
+      <p>Every Child, Every Chance.</p>
+      <p>Kamengo, Mpigi District, Central Region, Uganda</p>
+
+      <p>
+        <a href="mailto:allgodschildrenfoundation@gmail.com">
+          allgodschildrenfoundation@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <a href="what-we-do.html">What We Do</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="donate.html">Donate</a>
+      </p>
+
+      <p>Registration is currently in progress in Uganda.</p>
+
+      <p>
+        &copy; <span id="copyright-year">2026</span>
+        All God's Children Foundation. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  
+
+
+<script src="script.js"></script>
+</body>
+</html>

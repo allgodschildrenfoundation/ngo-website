@@ -1,0 +1,594 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Water Access | All God's Children Foundation</title>
+  <meta name="description" content="All God's Children Foundation supports community borehole development, improved water access and responsible water practices in Kamengo, Mpigi District, Uganda.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .safe-water-hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      padding: 70px 20px;
+      background-color: #12366b;
+      background-image:
+        linear-gradient(rgba(8, 24, 48, 0.48), rgba(8, 24, 48, 0.62)),
+        url("images/water2.jpg");
+      background-size: cover;
+      background-position: center 55%;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .safe-water-hero-content {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .safe-water-hero h1 {
+      margin: 0 0 18px;
+      color: #ffffff;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.2;
+    }
+
+    .safe-water-hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      line-height: 1.8;
+    }
+
+    .safe-water-section {
+      padding: 50px 20px;
+    }
+
+    .safe-water-intro {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .safe-water-intro h2,
+    .safe-water-details h2,
+    .borehole-heading {
+      color: #12366b;
+    }
+
+    .safe-water-gallery {
+      max-width: 1050px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .safe-water-gallery figure,
+    .borehole-gallery figure {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .safe-water-gallery img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .safe-water-gallery figcaption,
+    .borehole-gallery figcaption {
+      margin-top: 12px;
+      color: #12366b;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .borehole-section {
+      background: #f3f6fa;
+    }
+
+    .borehole-intro {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .borehole-heading {
+      margin: 0 0 15px;
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+    }
+
+    .borehole-gallery {
+      max-width: 1100px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .borehole-gallery figure {
+      padding: 15px;
+      border: 1px solid #e0e7ef;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 5px 18px rgba(18, 54, 107, 0.07);
+    }
+
+    .borehole-gallery img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .borehole-gallery .photo-description {
+      margin: 7px 0 0;
+      color: #526174;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .borehole-handover {
+      grid-column: 1 / -1;
+    }
+
+    .borehole-handover img {
+      height: 390px;
+    }
+
+    .safe-water-details {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .safe-water-details h2 {
+      margin-top: 28px;
+    }
+
+    .safe-water-details ul {
+      padding-left: 24px;
+    }
+
+    .borehole-note {
+      max-width: 900px;
+      margin: 35px auto 0;
+      padding: 24px;
+      border-left: 5px solid #237a4b;
+      border-radius: 8px;
+      background: #ffffff;
+      line-height: 1.8;
+    }
+
+    .borehole-note h3 {
+      margin-top: 0;
+      color: #12366b;
+    }
+
+    .safe-water-cta {
+      padding: 50px 20px;
+      background: #12366b;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .safe-water-cta h2 {
+      color: #ffffff;
+    }
+
+    .safe-water-cta p {
+      max-width: 750px;
+      margin: 12px auto 22px;
+      color: #ffffff;
+      line-height: 1.8;
+    }
+
+    .safe-water-button {
+      display: inline-block;
+      margin: 5px;
+      padding: 12px 24px;
+      border: 2px solid #f2c14e;
+      border-radius: 6px;
+      background: #f2c14e;
+      color: #172b49;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .safe-water-button:hover {
+      background: #ffda78;
+      border-color: #ffda78;
+    }
+
+    .safe-water-button.button-outline {
+      border-color: #ffffff;
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .safe-water-button.button-outline:hover {
+      background: #ffffff;
+      color: #12366b;
+    }
+
+    @media (max-width: 650px) {
+      .safe-water-hero {
+        min-height: 350px;
+        padding: 55px 18px;
+        background-position: center 55%;
+      }
+
+      .safe-water-gallery,
+      .borehole-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .safe-water-gallery img,
+      .borehole-gallery img,
+      .borehole-handover img {
+        height: auto;
+        max-height: 420px;
+      }
+
+      .borehole-handover {
+        grid-column: auto;
+      }
+
+      .safe-water-section {
+        padding: 38px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+  <div class="nav-wrap">
+
+    <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
+      <img src="images/logo.png" alt="All God's Children Foundation logo"
+           onerror="this.style.display='none'">
+      <span class="brand-name">
+        All God's Children Foundation
+        <span class="brand-tag">Every Child, Every Chance</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="mobile-nav-toggle"
+            type="button" aria-expanded="false"
+            aria-controls="primary-nav">
+      Menu ☰
+    </button>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+
+      <!-- TAB 1: WHAT WE DO -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          What We Do <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="what-we-do.html">All Our Programmes</a>
+          <a href="education-support.html">Education Support</a>
+          <a href="school-supplies.html">School Supplies Drive</a>
+          <a href="water-safety.html">Water Safety Campaign</a>
+          <a href="safe-water-access.html">Safe Water Access</a>
+          <a href="family-community-support.html">Family &amp; Community Support</a>
+          <a href="mentorship-life-skills.html">Mentorship &amp; Life Skills</a>
+        </div>
+      </div>
+
+      <!-- TAB 2: GET INVOLVED -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Get Involved <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="get-involved.html">Ways to Get Involved</a>
+          <a href="volunteer.html">Volunteer With Us</a>
+          <a href="partner-with-us.html">Partner With Us</a>
+          <a href="support-a-child.html">Support a Child</a>
+        </div>
+      </div>
+
+      <!-- TAB 3: NEWS+ -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          News+ <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="news.html">News &amp; Updates</a>
+          <a href="impact-stories.html">Impact Stories</a>
+          <a href="josh-story.html">Josh's Story</a>
+          <a href="family-2-story.html">A Grandmother's Story</a>
+          <a href="gallery.html">Photo &amp; Video Gallery</a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONTACT -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle" type="button"
+                aria-expanded="false">
+          Contact <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="contact.html">Contact Information</a>
+          <a href="contact.html#contact-form">Send an Inquiry</a>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPORT AGCF -->
+      <div class="nav-item">
+        <button class="nav-menu-toggle donate-link" type="button"
+                aria-expanded="false">
+          Support AGCF <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="donate.html">Donate to AGCF</a>
+          <a href="coffee.html">Coffee for Education</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content">
+
+    <section class="safe-water-hero">
+      <div class="safe-water-hero-content">
+        <h1>Safe Water Access</h1>
+        <p>
+          Supporting communities through borehole development, improved water
+          access, responsible water practices and community engagement.
+        </p>
+      </div>
+    </section>
+
+    <section class="safe-water-section">
+      <div class="safe-water-intro">
+        <h2>Water Matters for Every Community</h2>
+        <p>
+          Access to water is important for children's wellbeing, family health
+          and everyday community life. All God's Children Foundation recognises
+          the importance of improving access to water while encouraging
+          responsible water handling, hygiene and safer practices.
+        </p>
+        <p>
+          Our Safe Water Access programme highlights community water needs
+          and practical efforts to improve access. We believe communities
+          should participate in identifying their needs and working towards
+          sustainable solutions.
+        </p>
+      </div>
+
+      <div class="safe-water-gallery">
+        <figure>
+          <img
+            src="images/children-collecting-water-06.jpg"
+            alt="Children collecting water in their community"
+            loading="lazy">
+          <figcaption>Community Water Needs</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/safe-water-children-pond-02.jpg"
+            alt="Children fetching water from a pond"
+            loading="lazy">
+          <figcaption>The Challenge of Accessing Safe Water</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="safe-water-section borehole-section">
+      <div class="borehole-intro">
+        <h2 class="borehole-heading">Community Borehole Construction</h2>
+        <p>
+          A reliable water source can make an important difference in daily
+          community life. Our community borehole project involved several
+          stages, from manual digging and drilling to pump installation,
+          construction of the borehole top and community handover.
+        </p>
+        <p>
+          The photographs below document the stages of the project and
+          the community handover.
+        </p>
+      </div>
+
+      <div class="borehole-gallery">
+
+        <figure>
+          <img
+            src="images/borehole-manual-digging-01.jpg"
+            alt="Manual digging during the community borehole project"
+            loading="lazy">
+          <figcaption>1. Manual Digging</figcaption>
+          <p class="photo-description">
+            The initial digging stage of the borehole project.
+          </p>
+        </figure>
+
+        <figure>
+          <img
+            src="images/borehole-pump-installation-02.jpg"
+            alt="Pump installation at the community borehole"
+            loading="lazy">
+          <figcaption>2. Pump Installation</figcaption>
+          <p class="photo-description">
+            Installation of the pump at the community water point.
+          </p>
+        </figure>
+
+        <figure>
+          <img
+            src="images/borehole-drilling-03.jpg"
+            alt="Drilling work during borehole development"
+            loading="lazy">
+          <figcaption>3. Drilling</figcaption>
+          <p class="photo-description">
+            Drilling work as part of developing the borehole water source.
+          </p>
+        </figure>
+
+        <figure>
+          <img
+            src="images/borehole-headworks-construction-04.jpg"
+            alt="Construction of the borehole top and surrounding structure"
+            loading="lazy">
+          <figcaption>4. Borehole Top Construction</figcaption>
+          <p class="photo-description">
+            Construction of the top structure around the water point.
+          </p>
+        </figure>
+
+        <figure class="borehole-handover">
+          <img
+            src="images/borehole-community-handover-05.jpg"
+            alt="Community handover of the borehole project"
+            loading="lazy">
+          <figcaption>5. Community Handover</figcaption>
+          <p class="photo-description">
+            The community handover marking an important stage in the project.
+          </p>
+        </figure>
+
+      </div>
+
+      <div class="borehole-note">
+        <h3>Water Access and Community Participation</h3>
+        <p>
+          Community participation is important in water projects. Working
+          together can help communities identify their water needs and
+          encourage shared responsibility for caring for water points.
+          Appropriate maintenance and water-quality checks are important
+          considerations for a reliable and safe water supply.
+        </p>
+      </div>
+    </section>
+
+    <section class="safe-water-section">
+      <div class="safe-water-details">
+        <h2>Our Areas of Focus</h2>
+        <ul>
+          <li>Community borehole development and water access initiatives.</li>
+          <li>Promoting responsible use and care of community water points.</li>
+          <li>Raising awareness about safe water handling and storage.</li>
+          <li>Encouraging good hygiene practices at home and in the community.</li>
+          <li>Helping children understand risks around water sources.</li>
+          <li>Promoting community discussion about local water needs.</li>
+          <li>Working with potential partners to explore practical water solutions.</li>
+        </ul>
+
+        <h2>Working With Communities</h2>
+        <p>
+          We believe lasting improvements are stronger when communities
+          participate in identifying needs and discussing possible solutions.
+          We seek to work with families, schools, community leaders,
+          organisations and potential partners to improve water access and
+          encourage responsible water practices.
+        </p>
+
+        <h2>Our Commitment</h2>
+        <p>
+          Our commitment is to support efforts that improve children's and
+          families' wellbeing. Water-related activities depend on community
+          priorities, available resources and suitable partnerships. Developing
+          a water point is one part of the work; proper maintenance and
+          attention to water quality are also important.
+        </p>
+      </div>
+    </section>
+
+    <section class="safe-water-cta">
+      <h2>Work With Us for Better Water Access</h2>
+      <p>
+        Are you a community group, organisation or potential partner interested
+        in community water access? We welcome you to connect with
+        All God's Children Foundation.
+      </p>
+      <a class="safe-water-button" href="contact.html">Contact Us</a>
+      <a class="safe-water-button button-outline" href="partner-with-us.html">
+        Partner With Us
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>All God's Children Foundation</h3>
+        <p><strong>Every Child, Every Chance.</strong></p>
+        <p>
+          Supporting children's education, safety and wellbeing in partnership
+          with families and communities in Uganda.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="what-we-do.html">What We Do</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="news.html">News &amp; Updates</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Us</h3>
+        <p>Kamengo Sub-county, Mpigi District, Uganda</p>
+        <p>
+          Email:
+          <a href="mailto:allgodschildrenfoundation@gmail.com">
+            allgodschildrenfoundation@gmail.com
+          </a>
+        </p>
+        <p>
+          Phone:
+          <a href="https://wa.me/256701973542">+256 701 973 542</a>
+        </p>
+        <p><a href="donate.html">Support AGCF</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="current-year">2026</span>
+        All God's Children Foundation. All rights reserved.
+      </p>
+      <p>Registration is currently in progress in Uganda.</p>
+    </div>
+  </footer>
+  
+
+
+<script src="script.js"></script>
+</body>
+</html>
+```
