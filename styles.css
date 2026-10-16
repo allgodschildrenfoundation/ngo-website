@@ -1,4 +1,3 @@
-```css
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -750,7 +749,7 @@ hr {
 
 /* TABLETS AND MOBILE NAVIGATION */
 
-@media (max-width: 980px) {
+@media (max-width: 1120px) {
   .nav-toggle {
     display: block;
   }
@@ -946,7 +945,7 @@ hr {
   object-position: center;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1120px) {
   .nav-item > .nav-menu-toggle {
     width: 100%;
     text-align: left;
