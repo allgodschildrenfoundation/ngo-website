@@ -1,4 +1,4 @@
-~~~html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +19,7 @@
     .donate-hero .eyebrow {
       color: #fff;
     }
-    .donate-hero h1 {
-      margin: 12px 0;
-    }
+    .donate-hero h1 { margin: 12px 0; }
     .donate-hero p {
       max-width: 760px;
       margin: 0 auto 24px;
@@ -63,9 +61,7 @@
       text-align: center;
     }
     .donate-cta h2,
-    .donate-cta p {
-      color: #fff;
-    }
+    .donate-cta p { color: #fff; }
     .donate-cta p {
       max-width: 750px;
       margin: 0 auto 22px;
@@ -80,13 +76,74 @@
       color: #12366b;
     }
     .donate-page p,
-    .donate-page li {
-      line-height: 1.8;
-    }
+    .donate-page li { line-height: 1.8; }
     .donate-page a:focus-visible,
     .donate-page button:focus-visible {
       outline: 3px solid #f2c14e;
       outline-offset: 3px;
+    }
+
+    /* Added donation payment styles */
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .payment-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 4px 18px rgba(18, 54, 107, 0.09);
+      border-top: 4px solid #237a4b;
+    }
+    .payment-card h3 {
+      color: #12366b;
+      margin-top: 0;
+    }
+    .payment-detail {
+      background: #f0f5f2;
+      padding: 14px;
+      border-radius: 8px;
+      margin: 16px 0;
+      overflow-wrap: anywhere;
+    }
+    .payment-detail strong {
+      display: block;
+      color: #24332b;
+      margin-bottom: 5px;
+    }
+    .payment-number {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #12366b;
+      letter-spacing: 0.3px;
+    }
+    .copy-button {
+      display: inline-block;
+      background: #237a4b;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .copy-button:hover { background: #185d37; }
+    .payment-steps { padding-left: 22px; }
+    .payment-steps li { margin-bottom: 8px; }
+    .payment-disclaimer {
+      font-size: 0.94rem;
+      color: #444;
+      margin-top: 20px;
+    }
+    .copy-status {
+      min-height: 1.5em;
+      color: #237a4b;
+      font-weight: 600;
+      margin-top: 8px;
     }
   </style>
 </head>
@@ -96,7 +153,6 @@
 
 <header class="site-header">
   <div class="nav-wrap">
-
     <a class="brand" href="index.html" aria-label="All God's Children Foundation home">
       <img src="images/logo.png" alt="All God's Children Foundation logo"
            onerror="this.style.display='none'">
@@ -113,11 +169,8 @@
     </button>
 
     <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
-
-      <!-- TAB 1: WHAT WE DO -->
       <div class="nav-item">
-        <button class="nav-menu-toggle" type="button"
-                aria-expanded="false">
+        <button class="nav-menu-toggle" type="button" aria-expanded="false">
           What We Do <span class="dropdown-arrow">▾</span>
         </button>
         <div class="dropdown-menu">
@@ -131,10 +184,8 @@
         </div>
       </div>
 
-      <!-- TAB 2: GET INVOLVED -->
       <div class="nav-item">
-        <button class="nav-menu-toggle" type="button"
-                aria-expanded="false">
+        <button class="nav-menu-toggle" type="button" aria-expanded="false">
           Get Involved <span class="dropdown-arrow">▾</span>
         </button>
         <div class="dropdown-menu">
@@ -145,10 +196,8 @@
         </div>
       </div>
 
-      <!-- TAB 3: NEWS+ -->
       <div class="nav-item">
-        <button class="nav-menu-toggle" type="button"
-                aria-expanded="false">
+        <button class="nav-menu-toggle" type="button" aria-expanded="false">
           News+ <span class="dropdown-arrow">▾</span>
         </button>
         <div class="dropdown-menu">
@@ -160,10 +209,8 @@
         </div>
       </div>
 
-      <!-- TAB 4: CONTACT -->
       <div class="nav-item">
-        <button class="nav-menu-toggle" type="button"
-                aria-expanded="false">
+        <button class="nav-menu-toggle" type="button" aria-expanded="false">
           Contact <span class="dropdown-arrow">▾</span>
         </button>
         <div class="dropdown-menu">
@@ -172,10 +219,8 @@
         </div>
       </div>
 
-      <!-- TAB 5: SUPPORT AGCF -->
       <div class="nav-item">
-        <button class="nav-menu-toggle donate-link" type="button"
-                aria-expanded="false">
+        <button class="nav-menu-toggle donate-link" type="button" aria-expanded="false">
           Support AGCF <span class="dropdown-arrow">▾</span>
         </button>
         <div class="dropdown-menu">
@@ -183,7 +228,6 @@
           <a href="coffee.html">Coffee for Education</a>
         </div>
       </div>
-
     </nav>
   </div>
 </header>
@@ -236,7 +280,6 @@
       </div>
 
       <div class="grid grid-3">
-
         <article class="donation-card">
           <h3>Education Support</h3>
           <p>
@@ -244,9 +287,7 @@
             uniforms, scholastic materials and essential school items
             for children facing financial challenges.
           </p>
-          <a class="button button-green" href="education-support.html">
-            Explore Education Support
-          </a>
+          <a class="button button-green" href="education-support.html">Explore Education Support</a>
         </article>
 
         <article class="donation-card">
@@ -256,9 +297,7 @@
             education for children and communities, including the planned
             pilot across five primary schools in Kamengo.
           </p>
-          <a class="button button-green" href="water-safety.html">
-            Explore Water Safety
-          </a>
+          <a class="button button-green" href="water-safety.html">Explore Water Safety</a>
         </article>
 
         <article class="donation-card">
@@ -268,9 +307,7 @@
             children's development, mentorship and local initiatives
             that respond to identified needs.
           </p>
-          <a class="button button-green" href="what-we-do.html">
-            Explore Our Programmes
-          </a>
+          <a class="button button-green" href="what-we-do.html">Explore Our Programmes</a>
         </article>
 
         <article class="donation-card">
@@ -280,9 +317,7 @@
             children participate in learning. Contact us to discuss
             current needs before purchasing or delivering supplies.
           </p>
-          <a class="button button-green" href="contact.html">
-            Discuss Supplies
-          </a>
+          <a class="button button-green" href="contact.html">Discuss Supplies</a>
         </article>
 
         <article class="donation-card">
@@ -292,9 +327,7 @@
             or practical services that could help strengthen our
             programmes and community activities.
           </p>
-          <a class="button button-green" href="volunteer.html">
-            Volunteer With AGCF
-          </a>
+          <a class="button button-green" href="volunteer.html">Volunteer With AGCF</a>
         </article>
 
         <article class="donation-card">
@@ -304,14 +337,161 @@
             organisations can explore opportunities to work with AGCF
             in ways that fit shared goals and resources.
           </p>
-          <a class="button button-green" href="partner-with-us.html">
-            Partner With Us
-          </a>
+          <a class="button button-green" href="partner-with-us.html">Partner With Us</a>
         </article>
-
       </div>
     </div>
   </section>
+
+  <!-- NEW SECTION: DIRECT DONATIONS -->
+  <section class="section" id="donate-money">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Direct Contributions</span>
+        <h2>Donate Money to AGCF</h2>
+        <p>
+          Support children's education, essential school needs, water-safety
+          awareness and community wellbeing in Uganda. Choose one of the
+          payment methods below.
+        </p>
+      </div>
+
+      <div class="payment-grid">
+
+        <article class="payment-card">
+          <h3>Bank Transfer</h3>
+          <p>Use the following details for a bank deposit or transfer.</p>
+
+          <div class="payment-detail">
+            <strong>Bank Name</strong>
+            Centenary Bank
+          </div>
+
+          <div class="payment-detail">
+            <strong>Account Name</strong>
+            Namuwonge Alice
+          </div>
+
+          <div class="payment-detail">
+            <strong>Account Number</strong>
+            <span class="payment-number">3203162174</span>
+            <br>
+            <button class="copy-button" type="button"
+                    onclick="copyDonationDetail('3203162174', 'bank-status')">
+              Copy Account Number
+            </button>
+            <p id="bank-status" class="copy-status" aria-live="polite"></p>
+          </div>
+
+          <p>
+            When making a transfer, use a reference such as
+            <strong>AGCF Donation</strong> where the bank permits.
+            Please confirm the account details before sending funds.
+          </p>
+        </article>
+
+        <article class="payment-card">
+          <h3>MTN Mobile Money</h3>
+          <p>Send your contribution to the following mobile money number.</p>
+
+          <div class="payment-detail">
+            <strong>Registered Name</strong>
+            Namuwonge Alice
+          </div>
+
+          <div class="payment-detail">
+            <strong>Mobile Money Number</strong>
+            <span class="payment-number">+256 791 709765</span>
+            <br>
+            <button class="copy-button" type="button"
+                    onclick="copyDonationDetail('+256791709765', 'mtn-status')">
+              Copy MTN Number
+            </button>
+            <p id="mtn-status" class="copy-status" aria-live="polite"></p>
+          </div>
+
+          <ol class="payment-steps">
+            <li>Open the MTN Mobile Money menu on your phone.</li>
+            <li>Select the option to send money.</li>
+            <li>Enter the recipient number. If prompted for a local Ugandan number, use 0791709765.</li>
+            <li>Check that the recipient name matches before entering your PIN.</li>
+            <li>Keep the transaction confirmation message.</li>
+          </ol>
+        </article>
+
+        <article class="payment-card">
+          <h3>Airtel Money</h3>
+          <p>Use this number to send your contribution through Airtel Money.</p>
+
+          <div class="payment-detail">
+            <strong>Registered Name</strong>
+            Namuwonge Alice
+          </div>
+
+          <div class="payment-detail">
+            <strong>Mobile Money Number</strong>
+            <span class="payment-number">+256 757 842799</span>
+            <br>
+            <button class="copy-button" type="button"
+                    onclick="copyDonationDetail('+256757842799', 'airtel-status')">
+              Copy Airtel Number
+            </button>
+            <p id="airtel-status" class="copy-status" aria-live="polite"></p>
+          </div>
+
+          <ol class="payment-steps">
+            <li>Open the Airtel Money menu on your phone.</li>
+            <li>Select the option to send money.</li>
+            <li>Enter the recipient number. If prompted for a local Ugandan number, use 0757842799.</li>
+            <li>Check that the recipient name matches before entering your PIN.</li>
+            <li>Keep the transaction confirmation message.</li>
+          </ol>
+        </article>
+
+      </div>
+
+      <div class="donation-note" style="margin-top:28px;">
+        <strong>What your donation supports:</strong>
+        Contributions can help provide school fees, uniforms, scholastic
+        materials, school supplies and lunch where included in a child's
+        support plan. They can also support water-safety education,
+        drowning-prevention activities and assistance for vulnerable families.
+        The actual use of funds depends on identified needs and the purpose
+        agreed with the donor.
+      </div>
+
+      <div class="donation-card" style="margin-top:24px;">
+        <h3>After Making a Donation</h3>
+        <p>
+          Please keep your bank or mobile money transaction confirmation.
+          To notify AGCF of your contribution or request an acknowledgment
+          or receipt, contact us using the email below.
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:allgodschildrenfoundation@gmail.com?subject=Donation%20Confirmation%20-%20AGCF">
+            allgodschildrenfoundation@gmail.com
+          </a>
+        </p>
+        <p>
+          Please share only the transaction information needed to identify
+          your donation. Never share your mobile money PIN or bank password.
+        </p>
+        <a class="button button-green"
+           href="mailto:allgodschildrenfoundation@gmail.com?subject=Donation%20Confirmation%20-%20AGCF">
+          Confirm Your Donation
+        </a>
+      </div>
+
+      <p class="payment-disclaimer">
+        <strong>Transparency notice:</strong> The bank and mobile money
+        details above are in the treasurer's name. Donors should confirm
+        the recipient and intended use before transferring funds.
+        AGCF's registration is currently in progress in Uganda.
+      </p>
+    </div>
+  </section>
+  <!-- END NEW SECTION -->
 
   <section class="section">
     <div class="container split">
@@ -345,7 +525,8 @@
             <li>Agree on how the contribution will be used.</li>
             <li>Ask how updates about the supported activity will be shared.</li>
           </ul>
-          <a class="button button-green" href="mailto:allgodschildrenfoundation@gmail.com?subject=Supporting%20AGCF">
+          <a class="button button-green"
+             href="mailto:allgodschildrenfoundation@gmail.com?subject=Supporting%20AGCF">
             Email AGCF
           </a>
         </div>
@@ -357,10 +538,8 @@
     <div class="container">
       <div class="donation-note">
         <strong>Important:</strong> Please contact AGCF before sending money
-        or purchasing items. We will discuss the intended purpose and
-        appropriate arrangements with you. Do not send funds to an account
-        unless its details and intended use have been confirmed directly
-        with AGCF.
+        or purchasing items. Confirm the recipient, intended purpose and
+        payment details before completing a transaction.
       </div>
     </div>
   </section>
@@ -407,7 +586,6 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-
       <div>
         <h2>All God's Children Foundation</h2>
         <p><strong>Every Child, Every Chance.</strong></p>
@@ -446,7 +624,6 @@
         </p>
         <p><a href="coffee.html">Coffee for Education</a></p>
       </div>
-
     </div>
 
     <div class="footer-bottom">
@@ -459,10 +636,39 @@
   </div>
 </footer>
 
-
-
-
 <script src="script.js"></script>
+
+<script>
+  async function copyDonationDetail(value, statusId) {
+    const status = document.getElementById(statusId);
+
+    try {
+      await navigator.clipboard.writeText(value);
+      status.textContent = "Copied successfully.";
+    } catch (error) {
+      // Fallback for browsers where the Clipboard API is unavailable.
+      const field = document.createElement("textarea");
+      field.value = value;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+
+      try {
+        const copied = document.execCommand("copy");
+        status.textContent = copied
+          ? "Copied successfully."
+          : "Copy unavailable. Please select and copy the number manually.";
+      } catch (fallbackError) {
+        status.textContent =
+          "Copy unavailable. Please select and copy the number manually.";
+      }
+
+      document.body.removeChild(field);
+    }
+  }
+</script>
+
 </body>
 </html>
-~~~
